@@ -1,18 +1,33 @@
 body {
   font-family: 'Poppins', sans-serif;
-}
-
-.bg-custom-dark {
   background-color: #0F0F0F;
 }
 
-.title-xl {
-  font-size: 96px;
-  text-align: center;
+html {
+  font-size: 16px;
 }
-.subtitle-md {
-  font-size: 18px;
+
+html.font-small {
+  font-size: 14px;
+}
+html.font-medium {
+  font-size: 20px;
+}
+html.font-large {
+  font-size: 24px;
+}
+
+.title-xl {
+   font-size: clamp(2rem, 6vw, 6rem);
   text-align: center;
+   line-height: 1.1; 
+}
+
+.subtitle-md {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  text-align: center;
+  line-height: 1.5;
+
 }
 
 .text-accent {
@@ -25,7 +40,7 @@ body {
   background: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
   position: absolute;
-  top: 120%; /* más abajo */
+  bottom: -80px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 0;
@@ -37,13 +52,18 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* centra la imagen respecto al logo */
-  max-width: 400px;
   z-index: 0;
   pointer-events: none;
   opacity: 1;
+  max-width: clamp(150px, 20vw, 400px);
+  width: 100%;
+  height: auto;
 }
 
 .logo-unlp {
   z-index: 2;
   position: relative;
+  max-width: clamp(150px, 25vw, 300px);
+  width: 100%;
+  height: auto;
 }

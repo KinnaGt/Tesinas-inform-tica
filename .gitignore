@@ -24,8 +24,6 @@ build/
 .env
 .env.*
 
-# Compilaciones de SASS (si usás)
-*.css.map
 
 # Imágenes de pruebas o exportaciones temporales
 img/temp/
