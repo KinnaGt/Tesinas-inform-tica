@@ -1,0 +1,31 @@
+# Node (si usás npm para algún tool)
+node_modules/
+package-lock.json
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Archivos temporales y de backup
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Cache del navegador o herramientas
+.cache/
+dist/
+build/
+
+# Archivos del entorno
+.env
+.env.*
+
+# Compilaciones de SASS (si usás)
+*.css.map
+
+# Imágenes de pruebas o exportaciones temporales
+img/temp/

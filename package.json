@@ -1,0 +1,20 @@
+{
+  "author": "",
+  "description": "",
+  "devDependencies": {
+    "axe-core": "^4.10.3",
+    "lighthouse": "^12.6.1",
+    "live-server": "^1.2.0",
+    "serve": "^14.2.4"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "accesible_web",
+  "scripts": {
+    "audit": "lighthouse http://localhost:8080 --only-categories=accessibility --chrome-flags='--headless'",
+    "dev": "live-server public",
+    "preview": "serve public"
+  },
+  "version": "1.0.0"
+}
