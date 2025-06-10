@@ -1,6 +1,6 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #0F0F0F;
+  font-family: "Poppins", sans-serif;
+  background-color: #0f0f0f;
 }
 
 html {
@@ -8,34 +8,42 @@ html {
 }
 
 html.font-small {
-  font-size: 14px;
+  font-size: 12px;
 }
 html.font-medium {
-  font-size: 20px;
+  font-size: 16px;
 }
 html.font-large {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .title-xl {
-   font-size: clamp(2rem, 6vw, 6rem);
+  font-size: clamp(2rem, 6vw, 6rem);
   text-align: center;
-   line-height: 1.1; 
+  line-height: 1.1;
 }
 
 .subtitle-md {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  text-align: center;
   line-height: 1.5;
-
+  text-align: center;
 }
 
 .text-accent {
-  color: #8C0011;
+  color: #8c0011;
+}
+
+.image-stack {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 300px; /* ajustable */
 }
 
 .ellipse-shadow {
-  width: 200px;
+  width: clamp(100px, 25vw, 200px);
   height: 20px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
@@ -46,24 +54,49 @@ html.font-large {
   z-index: 0;
 }
 
-
 .bg-doodles {
+  z-index: 0;
+  max-width: clamp(200px, 25vw, 600px);
+  width: 100%;
+  height: auto;
+  opacity: 1;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* centra la imagen respecto al logo */
-  z-index: 0;
-  pointer-events: none;
-  opacity: 1;
-  max-width: clamp(150px, 20vw, 400px);
-  width: 100%;
-  height: auto;
+  transform: translate(-50%, -50%);
 }
 
 .logo-unlp {
-  z-index: 2;
-  position: relative;
-  max-width: clamp(150px, 25vw, 300px);
+  z-index: 1;
+  max-width: clamp(125px, 20vw, 300px);
   width: 100%;
   height: auto;
+  position: relative;
+}
+
+.title-lg {
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.tesina-img {
+  max-width: clamp(200px, 30vw, 400px);
+  width: 100%;
+  height: auto;
+  position: relative;
+  bottom: -40px;
+  z-index: 1;
+}
+.bg-doodles-tesina {
+  z-index: 0;
+  max-width: clamp(200px, 30vw, 900px);
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
