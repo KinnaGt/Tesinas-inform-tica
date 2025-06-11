@@ -5,9 +5,13 @@
 }
 
 html.theme-light {
-  --bg-color: white;
-  --text-color: black;
-  --text-secondary: #555;
+  --bg-color: #f4f4f4; /* Gris muy claro, no blanco puro */
+  --text-color: #333333; /* Gris oscuro suave en lugar de negro puro */
+  --text-secondary: #666666; /* Gris medio para texto secundario */
+  --text-accent: #8c0011; /* Mantener el color acento */
+}
+html.theme-light .theme-icon {
+  filter: invert(1) brightness(1.2);
 }
 
 body {

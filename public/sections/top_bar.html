@@ -1,12 +1,13 @@
 <!-- TopBar de accesibilidad -->
 <div id="accessibility-bar" style="
   position: fixed; top: 0; left: 0; right: 0;
-  background-color: #0f0f0f;
-  color: white; padding: 8px 16px;
+  background-color: var(--bg-color);
+  color: var(--text-color); padding: 8px 16px;
   display: flex; justify-content: flex-end; align-items: center;
   z-index: 9999; font-family: 'Poppins', sans-serif;
 ">
-  <button id="acc-settings-btn" aria-label="Accesibilidad" style="background: none; border: none; cursor: pointer;">
+  <button id="acc-settings-btn" aria-label="Accesibilidad" class="theme-icon"
+    style="background: none; border: none; cursor: pointer;">
     <img src="img/settings_icon.png" alt="Accesibilidad" style="width: 24px; height: 24px;">
   </button>
 
@@ -16,17 +17,18 @@
     position: absolute;
     right: 16px;
     top: 40px;
-    background: #0f0f0f;
+    background: var(--bg-color);
     border-radius: 20px;
     padding: 20px;
     border: 4px solid #eaeaea;
     width: 200px;
     box-shadow: 0 0 8px rgba(0,0,0,0.4);
     font-size: 14px;
+    color: var(--text-color);
   ">
     <!-- Tamaño de letra -->
     <div style="margin-bottom: 16px;">
-      <strong style="display: block; margin-bottom: 8px;">Tamaño de letra</strong>
+      <strong style="display: block; margin-bottom: 8px;" class="theme-text">Tamaño de letra</strong>
       <button class="font-btn" onclick="setFontSize('small')">Chica</button>
       <button class="font-btn" onclick="setFontSize('medium')">Mediana</button>
       <button class="font-btn" onclick="setFontSize('large')">Grande</button>
@@ -34,7 +36,7 @@
 
     <!-- Tema -->
     <div style="display: flex; align-items: center; gap: 10px; position: relative;">
-      <strong style="display: block; margin-bottom: 8px;">Tema</strong>
+      <strong style="display: block; margin-bottom: 8px;" class="theme-text">Tema</strong>
       <div class="theme-wrapper" id="dark-wrapper">
         <img id="dark-theme-btn" src="img/dark_theme.png" alt="Oscuro" class="theme-icon"
           style="height: 24px; cursor: pointer;">
@@ -42,7 +44,6 @@
       <div class="theme-wrapper" id="light-wrapper">
         <img id="light-theme-btn" src="img/light_theme.png" alt="Claro" class="theme-icon"
           style="height: 24px; cursor: pointer;">
-
       </div>
     </div>
 
