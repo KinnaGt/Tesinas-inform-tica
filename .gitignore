@@ -1,6 +1,7 @@
 # Node (si usás npm para algún tool)
 node_modules/
 package-lock.json
+UX.fig
 
 # Archivos del sistema
 .DS_Store
