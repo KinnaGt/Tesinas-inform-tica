@@ -2,7 +2,6 @@
   --bg-color: #0f0f0f;
   --text-color: white;
   --text-secondary: #ccc;
-  --font-size-base: 14px;
 }
 
 html.theme-light {
@@ -35,17 +34,17 @@ body {
 }
 
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 html.font-small {
-  --font-size-base: 12px;
+  font-size: 12px;
 }
 html.font-medium {
-  --font-size-base: 14px;
+  font-size: 16px;
 }
 html.font-large {
-  --font-size-base: 18px;
+  font-size: 20px;
 }
 
 /* texto base que responde al tema */
