@@ -1,14 +1,19 @@
 <section class="vh-100 d-flex align-items-center text-light">
     <div class="container">
-        <div class="row align-items-center flex-column flex-md-row">
+        <h2 class="mb-4">
+            <strong class="text-accent">Buscador</strong>
+            <strong>de tesinas</strong>
+        </h2>
 
-            <!-- Columna de texto -->
-            <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-                <h2 class="title-lg">
-                    <strong class="text-accent">Buscador</strong>
-                    <strong>de tesinas</strong>
-                </h2>
-            </div>
+        <!-- Filtros -->
+        <div class="mb-4 d-flex gap-3 flex-wrap">
+            <button class="btn btn-filter active" data-filter="all">All</button>
+            <button class="btn btn-filter" data-filter="IA">IA</button>
+            <button class="btn btn-filter" data-filter="UX">UX</button>
+            <button class="btn btn-filter" data-filter="Web Design">Web Design</button>
         </div>
+
+        <!-- Galería -->
+        <div id="tesinas-carousel" class="tesinas-carousel d-flex overflow-auto gap-3"></div>
     </div>
 </section>

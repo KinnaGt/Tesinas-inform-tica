@@ -70,6 +70,24 @@ button {
   font-weight: bold;
 }
 
+.btn-filter {
+  background-color: #222;
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 16px;
+  border: none;
+}
+
+.btn-filter.active {
+  background-color: #a00;
+  color: white;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
 .title-xl {
   font-size: clamp(2rem, 6vw, 6rem);
   text-align: center;
@@ -179,4 +197,47 @@ button {
 .theme-icon {
   position: relative;
   z-index: 1;
+}
+
+.tesinas-carousel {
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+.tesinas-carousel > .tesina-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 300px;
+}
+
+.tesinas-carousel {
+  scrollbar-width: thin;
+  scroll-behavior: smooth; /* Desplazamiento suave */
+  scrollbar-color: var(--accent-color) transparent;
+}
+
+.tesinas-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tesinas-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tesinas-carousel::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background-color 0.2s;
+}
+.tesinas-carousel img {
+  user-select: none;
+  pointer-events: none;
+}
+.tesinas-carousel::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-color-hover, #888);
+}
+.tesinas-carousel.dragging {
+  cursor: grabbing;
+  user-select: none;
 }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalle Tesina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="theme-dark font-medium">
+
+    <!-- TopBar accesibilidad -->
+    <div include-html="components/top_bar.html"></div>
+
+    <!-- Contenido principal -->
+    <section class="container py-5 text-light">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 id="tesina-title" class="title-lg mb-3"></h1>
+                <h5 class="text-secondary mb-2">Autor:</h5>
+                <p id="tesina-author" class="mb-3"></p>
+                <h5 class="text-secondary mb-2">Descripción:</h5>
+                <p id="tesina-desc" class="text-secondary"></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts/include.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const nombre = params.get("nombre");
+
+            if (!nombre) return;
+
+            fetch("data/tesinas.json")
+                .then(res => res.json())
+                .then(tesinas => {
+                    const tesina = tesinas.find(t => t.nombre === nombre);
+                    if (!tesina) return;
+
+                    document.getElementById("tesina-title").textContent = tesina.nombre;
+                    document.getElementById("tesina-author").textContent = tesina.autor || "Autor desconocido";
+                    document.getElementById("tesina-desc").textContent = tesina.descripcion || "";
+                    document.getElementById("tesina-banner").src = tesina.bannerUrl || "/img/default-banner.jpg";
+                });
+        });
+    </script>
+</body>
+
+</html>

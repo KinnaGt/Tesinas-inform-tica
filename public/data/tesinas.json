@@ -1,0 +1,44 @@
+[
+  {
+    "autor": "Autor X",
+    "categoria": "UX",
+    "descripcion": "Descripción corta",
+    "nombre": "Tesina 1"
+  },
+  {
+    "autor": "Autor Y",
+    "categoria": "UX",
+    "descripcion": "Descripción corta",
+    "nombre": "Tesina 2"
+  },
+  {
+    "autor": "Autor Z",
+    "categoria": "UX",
+    "descripcion": "Descripción corta",
+    "nombre": "Tesina 3"
+  },
+  {
+    "autor": "Autor A",
+    "categoria": "UX",
+    "descripcion": "Descripción corta",
+    "nombre": "Tesina 3"
+  },
+  {
+    "autor": "Autor A",
+    "categoria": "UX",
+    "descripcion": "Descripción corta",
+    "nombre": "Tesina 3"
+  },
+  {
+    "autor": "Autor A",
+    "categoria": "UX",
+    "descripcion": "Descripción corta",
+    "nombre": "Tesina 3"
+  },
+  {
+    "autor": "Autor A",
+    "categoria": "UX",
+    "descripcion": "Descripción corta",
+    "nombre": "Tesina 3"
+  }
+]
