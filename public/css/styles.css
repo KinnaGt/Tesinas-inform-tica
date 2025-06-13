@@ -241,3 +241,90 @@ button {
 .tesinas-carousel::-webkit-scrollbar-track {
   background: transparent;
 }
+
+/* Ajuste inputs para respetar variables existentes */
+.theme-input {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-secondary);
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.theme-input:focus {
+  border-color: var(--text-accent, #97262a);
+  outline: none;
+  box-shadow: 0 0 6px var(--text-accent, #97262a);
+}
+
+/* Labels y textos que respetan tema */
+.text-theme {
+  color: var(--text-color);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+/* Estilo para la respuesta (no editable, no seleccionable) */
+.answer-output {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-secondary);
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  min-height: 3rem;
+  user-select: none;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Evitar que cambie color al seleccionar */
+.answer-output::selection {
+  background: transparent;
+  color: inherit;
+}
+
+.btn-red {
+  background-color: #8c0011;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  text-align: center;
+  align-self: flex-start; /* lo alinea a la izquierda dentro de un flex container */
+  font-size: 0.9rem;
+}
+
+.btn-red:hover {
+  background-color: #c22;
+}
+
+button.ask-btn {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.ask-section > * {
+  margin-bottom: 1.2rem;
+}
+
+.ask-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px; /* o ajustalo según tu diseño */
+}

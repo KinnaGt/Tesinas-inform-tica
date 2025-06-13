@@ -1,14 +1,48 @@
 <section class="vh-100 d-flex align-items-center text-light">
     <div class="container">
+        <h2 class="title-lg theme-text">
+            <strong class="text-accent">Preguntas</strong>
+            <strong>sobre las tesinas</strong>
+        </h2>
         <div class="row align-items-center flex-column flex-md-row">
+            <div class="col-md-6 mb-4 mb-md-0 text-center">
+                <img src="img/questions.png" alt="Ilustración de preguntas" class="img-fluid ask-img mx-auto d-block" />
+            </div>
 
-            <!-- Columna de texto -->
-            <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-                <h2 class="title-lg">
-                    <strong class="text-accent">Preguntas</strong>
-                    <strong>sobre las tesinas</strong>
-                </h2>
+            <div class="col-md-6">
+                <div class="ask-section d-flex flex-column">
+                    <div class="d-flex flex-column gap-2">
+                        <label for="questionInput" class="text-theme">Pregunta</label>
+                        <input type="text" id="questionInput" class="theme-input" placeholder="Escribe tu pregunta..."
+                            autocomplete="off" />
+                    </div>
+
+                    <button id="askButton" class="btn-red font-btn ask-btn align-self-start" type="button">
+                        Preguntar
+                    </button>
+
+                    <div class="d-flex flex-column gap-2 mt-3">
+                        <label for="answerOutput" class="text-theme mt-4">Respuesta:</label>
+                        <div id="answerOutput" class="answer-output"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    </div>
 </section>
+
+<script>
+    document.getElementById("askButton").addEventListener("click", function () {
+        const input = document.getElementById("questionInput").value.trim();
+        const output = document.getElementById("answerOutput");
+
+        if (!input) {
+            output.textContent = "Por favor escribí una pregunta.";
+            return;
+        }
+
+        // Simulación de respuesta
+        output.textContent = "Gracias por tu pregunta. Un asesor académico te responderá a la brevedad.";
+    });
+</script>

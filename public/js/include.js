@@ -23,6 +23,20 @@ document.addEventListener("DOMContentLoaded", function () {
   Promise.all(promises).then(() => {
     loadTesinas(); // ✅ Ahora sí, el contenedor ya existe
 
+    // Botón de preguntar: simular respuesta
+    const askBtn = document.getElementById("askButton");
+    const input = document.getElementById("questionInput");
+    const output = document.getElementById("answerOutput");
+
+    if (askBtn && input && output) {
+      askBtn.addEventListener("click", () => {
+        const value = input.value.trim();
+        output.textContent = value
+          ? "Gracias por tu pregunta. Un asesor académico te responderá a la brevedad."
+          : "Por favor escribí una pregunta.";
+      });
+    }
+
     // Agregar listeners a los botones de filtro
     document.querySelectorAll(".btn-filter").forEach((btn) =>
       btn.addEventListener("click", () => {
