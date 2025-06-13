@@ -8,7 +8,7 @@ html.theme-light {
   --bg-color: #f4f4f4; /* Gris muy claro, no blanco puro */
   --text-color: #333333; /* Gris oscuro suave en lugar de negro puro */
   --text-secondary: #666666; /* Gris medio para texto secundario */
-  --text-accent: #8c0011; /* Mantener el color acento */
+  --text-accent: #97262a; /* Mantener el color acento */
 }
 html.theme-light .theme-icon {
   filter: invert(1) brightness(1.2);
@@ -198,46 +198,46 @@ button {
   position: relative;
   z-index: 1;
 }
-
-.tesinas-carousel {
-  scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
-}
+/* Mejora espaciado y sombra de ítems */
 .tesinas-carousel > .tesina-item {
   flex: 0 0 auto;
   scroll-snap-align: start;
   width: 300px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tesinas-carousel > .tesina-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Agrega margen lateral para que no queden pegados al borde */
+.tesinas-carousel {
+  padding: 1rem 0.5rem 2rem 0.5rem;
 }
 
 .tesinas-carousel {
-  scrollbar-width: thin;
-  scroll-behavior: smooth; /* Desplazamiento suave */
-  scrollbar-color: var(--accent-color) transparent;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #a00 transparent; /* color para el thumb y track */
 }
 
+/* WebKit (Chrome, Edge) */
 .tesinas-carousel::-webkit-scrollbar {
   height: 8px;
+}
+.tesinas-carousel::-webkit-scrollbar-thumb {
+  background-color: #a00;
+  border-radius: 4px;
+}
+
+.tesinas-carousel::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
 }
 
 .tesinas-carousel::-webkit-scrollbar-track {
   background: transparent;
-}
-
-.tesinas-carousel::-webkit-scrollbar-thumb {
-  background-color: var(--accent-color);
-  border-radius: 4px;
-  border: 2px solid transparent;
-  background-clip: content-box;
-  transition: background-color 0.2s;
-}
-.tesinas-carousel img {
-  user-select: none;
-  pointer-events: none;
-}
-.tesinas-carousel::-webkit-scrollbar-thumb:hover {
-  background-color: var(--accent-color-hover, #888);
-}
-.tesinas-carousel.dragging {
-  cursor: grabbing;
-  user-select: none;
 }

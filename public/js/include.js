@@ -133,6 +133,39 @@ function loadTesinas() {
         container.appendChild(col);
       });
 
+      document.querySelectorAll(".btn-filter").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".btn-filter")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const filter = btn.dataset.filter;
+          const items = document.querySelectorAll(".tesina-item");
+          let visibleCount = 0;
+
+          items.forEach((item) => {
+            const match = filter === "all" || item.dataset.category === filter;
+            item.style.display = match ? "block" : "none";
+            if (match) visibleCount++;
+          });
+
+          // Mostrar mensaje si no hay coincidencias
+          const container = document.getElementById("tesinas-carousel");
+          let msg = document.getElementById("no-tesinas-msg");
+
+          if (!msg) {
+            msg = document.createElement("div");
+            msg.id = "no-tesinas-msg";
+            msg.className = "";
+            container.appendChild(msg);
+          }
+
+          msg.textContent =
+            visibleCount === 0 ? "No hay tesinas para este filtro." : "";
+        })
+      );
+
       document
         .querySelectorAll("#tesinas-carousel img, #tesinas-carousel a")
         .forEach((el) => {
