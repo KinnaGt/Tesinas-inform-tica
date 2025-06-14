@@ -133,11 +133,11 @@ function loadTesinas() {
   <a href="detail_tesina.html?nombre=${encodeURIComponent(
     tesina.nombre
   )}" class="text-decoration-none">
-    <div class="card bg-dark border-0 h-100 shadow-sm">
+    <div class="card card-theme border-0 h-100 shadow-sm">
       <img src="${banner}" class="card-img-top" alt="Banner de ${
           tesina.nombre
         }">
-      <div class="card-body text-white">
+      <div class="card-body">
         <h5 class="card-title">${tesina.nombre}</h5>
         <p class="card-text">${tesina.autor || ""}</p>
       </div>
