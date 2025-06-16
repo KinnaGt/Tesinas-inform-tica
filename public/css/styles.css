@@ -4,6 +4,7 @@
   --text-secondary: #bbbbbb; /* gris claro */
   --text-accent: #8c0011; /* rojo accesible sobre fondo oscuro (contrast ratio 7:1 aprox) */
   --card-bg: #1e1e1e; /* gris oscuro */
+  --btn-text-on-accent: #ffffff; /* texto blanco sobre rojo */
 }
 
 html.theme-light {
@@ -70,7 +71,7 @@ button {
 .active-btn {
   font-size: clamp(0.8rem, 1.5vw, 1.2rem);
   background-color: var(--text-accent);
-  color: var(--text-color);
+  color: var(--btn-text-on-accent);
   font-weight: bold;
 }
 
@@ -84,7 +85,7 @@ button {
 
 .btn-filter.active {
   background-color: var(--text-accent);
-  color: var(--text-color);
+  color: var(--btn-text-on-accent);
   border-color: var(--text-accent);
 }
 
@@ -309,7 +310,7 @@ button {
 
 .btn-red {
   background-color: var(--text-accent);
-  color: var(--text-color);
+  color: var(--btn-text-on-accent);
   border: none;
   border-radius: 999px;
   padding: 6px 12px;
