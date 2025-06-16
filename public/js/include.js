@@ -111,6 +111,7 @@ function setupAccessibilityMenu() {
 
   // Tema por defecto
   setTheme("dark");
+  // Actualizar imágenes según el tema
 }
 
 function loadTesinas() {
