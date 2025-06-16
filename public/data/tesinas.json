@@ -21,24 +21,24 @@
     "autor": "Autor A",
     "categoria": "UX",
     "descripcion": "Descripción corta",
-    "nombre": "Tesina 3"
+    "nombre": "Tesina {}"
   },
   {
     "autor": "Autor A",
     "categoria": "UX",
     "descripcion": "Descripción corta",
-    "nombre": "Tesina 3"
+    "nombre": "Tesina {}"
   },
   {
     "autor": "Autor A",
     "categoria": "IA",
     "descripcion": "Descripción corta",
-    "nombre": "Tesina 3"
+    "nombre": "Tesina 6"
   },
   {
     "autor": "Autor A",
     "categoria": "Web Design",
     "descripcion": "Descripción corta",
-    "nombre": "Tesina 3"
+    "nombre": "Tesina 4"
   }
 ]
