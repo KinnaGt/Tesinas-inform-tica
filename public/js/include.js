@@ -100,6 +100,7 @@ function setupAccessibilityMenu() {
     } else {
       document.getElementById("light-wrapper").classList.add("active-theme");
     }
+    updateThemeImages(theme); // Actualiza la imagen según el tema
   }
 
   darkBtn.classList.add("theme-icon");
@@ -222,4 +223,16 @@ function enableDragScroll(container) {
     const walk = (x - startX) * 0.5; // ⬅️ Reducí la velocidad
     container.scrollLeft = scrollLeft - walk;
   });
+}
+
+function updateThemeImages(theme) {
+  const whatImg = document.getElementById("whatImg");
+  if (whatImg) {
+    whatImg.src = theme === "dark" ? "img/what_is_dark.png" : "img/what_is.png";
+  }
+  const questionImg = document.getElementById("questionImg");
+  if (questionImg) {
+    questionImg.src =
+      theme === "dark" ? "img/questions_dark.png" : "img/questions.png";
+  }
 }
