@@ -24,7 +24,7 @@
 
                     <div class="d-flex flex-column gap-2 mt-3">
                         <p id="respuestaLabel" class="text-theme mt-4">Respuesta:</p>
-                        <div id="answerOutput" class="answer-output" aria-labelledby="Respuesta de la pregunta"></div>
+                        <div id="answerOutput" class="answer-output"></div>
                     </div>
                 </div>
             </div>
@@ -34,16 +34,12 @@
 </section>
 
 <script>
-    document.getElementById("askButton").addEventListener("click", function () {
-        const input = document.getElementById("questionInput").value.trim();
-        const output = document.getElementById("answerOutput");
-
-        if (!input) {
-            output.textContent = "Por favor escribí una pregunta.";
-            return;
-        }
-
-        // Simulación de respuesta
-        output.textContent = "Gracias por tu pregunta. Un asesor académico te responderá a la brevedad.";
-    });
-</script>
+    document.getElementById(" askButton").addEventListener("click", function () {
+        const
+            input = document.getElementById("questionInput").value.trim(); const
+                output = document.getElementById("answerOutput"); if (!input) {
+                    output.textContent = "Por favor escribí una pregunta."; return;
+                } // Simulación de respuesta
+        output.textContent = "Gracias por tu pregunta. Un asesor académico te responderá a la brevedad."
+            ;
+    }); </script>
