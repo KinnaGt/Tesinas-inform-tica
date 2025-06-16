@@ -140,7 +140,7 @@ function loadTesinas() {
           tesina.nombre
         }">
       <div class="card-body">
-        <h5 class="card-title">${tesina.nombre}</h5>
+        <h3 class="card-title">${tesina.nombre}</h3>
         <p class="card-text">${tesina.autor || ""}</p>
       </div>
     </div>
