@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const includes = document.querySelectorAll("[include-html]");
+  const includes = document.querySelectorAll("[data-include-html]");
 
   // Convertimos el forEach en una lista de promesas
   const promises = Array.from(includes).map(async (el) => {
-    const file = el.getAttribute("include-html");
+    const file = el.getAttribute("data-include-html");
     try {
       const resp = await fetch(file);
       if (resp.ok) {
