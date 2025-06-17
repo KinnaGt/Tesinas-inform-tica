@@ -19,11 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Una vez que se cargaron todos los includes
   Promise.all(promises).then(() => {
     loadTesinas();
 
-    // Botón de preguntar: simular respuesta
     const askBtn = document.getElementById("askButton");
     const input = document.getElementById("questionInput");
     const output = document.getElementById("answerOutput");
@@ -37,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    // Agregar listeners a los botones de filtro
     document.querySelectorAll(".btn-filter").forEach((btn) =>
       btn.addEventListener("click", () => {
         document
@@ -71,10 +68,8 @@ function setupAccessibilityMenu() {
     html.classList.remove("font-small", "font-medium", "font-large");
     html.classList.add(`font-${size}`);
 
-    // Remover estado activo
     fontButtons.forEach((btn) => btn.classList.remove("active-btn"));
 
-    // Activar botón correspondiente
     document
       .querySelector(`.font-btn[onclick="setFontSize('${size}')"]`)
       ?.classList.add("active-btn");
@@ -91,7 +86,6 @@ function setupAccessibilityMenu() {
     html.classList.remove("theme-dark", "theme-light");
     html.classList.add(`theme-${theme}`);
 
-    // Actualiza el fondo elíptico
     document
       .querySelectorAll(".theme-wrapper")
       .forEach((w) => w.classList.remove("active-theme"));
@@ -100,7 +94,7 @@ function setupAccessibilityMenu() {
     } else {
       document.getElementById("light-wrapper").classList.add("active-theme");
     }
-    updateThemeImages(theme); // Actualiza la imagen según el tema
+    updateThemeImages(theme);
   }
 
   darkBtn.classList.add("theme-icon");
@@ -109,7 +103,21 @@ function setupAccessibilityMenu() {
   darkBtn.addEventListener("click", () => setTheme("dark"));
   lightBtn.addEventListener("click", () => setTheme("light"));
 
-  // Tema por defecto
+  // Agregado para activación con teclado (Enter y Space)
+  darkBtn.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setTheme("dark");
+    }
+  });
+
+  lightBtn.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setTheme("light");
+    }
+  });
+
   setTheme("dark");
 }
 
@@ -165,7 +173,6 @@ function loadTesinas() {
             if (match) visibleCount++;
           });
 
-          // Mostrar mensaje si no hay coincidencias
           const container = document.getElementById("tesinas-carousel");
           let msg = document.getElementById("no-tesinas-msg");
 
