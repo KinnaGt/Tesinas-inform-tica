@@ -187,8 +187,16 @@ button {
 }
 
 .theme-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
   position: relative;
   z-index: 1;
+}
+
+.theme-icon .icon-img {
+  width: 32px;
+  height: 32px;
 }
 
 .tesinas-carousel > .tesina-item {
