@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (resp.ok) {
         el.innerHTML = await resp.text();
         if (file.includes("top_bar.html")) {
-          setupAccessibilityMenu(); // ⬅️ Llamar después de insertar
+          setupAccessibilityMenu();
         }
       } else {
         el.innerHTML = "No se pudo cargar " + file;
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Una vez que se cargaron todos los includes
   Promise.all(promises).then(() => {
-    loadTesinas(); // ✅ Ahora sí, el contenedor ya existe
+    loadTesinas();
 
     // Botón de preguntar: simular respuesta
     const askBtn = document.getElementById("askButton");
@@ -111,7 +111,6 @@ function setupAccessibilityMenu() {
 
   // Tema por defecto
   setTheme("dark");
-  // Actualizar imágenes según el tema
 }
 
 function loadTesinas() {
@@ -221,7 +220,7 @@ function enableDragScroll(container) {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - container.offsetLeft;
-    const walk = (x - startX) * 0.5; // ⬅️ Reducí la velocidad
+    const walk = (x - startX) * 0.5;
     container.scrollLeft = scrollLeft - walk;
   });
 }

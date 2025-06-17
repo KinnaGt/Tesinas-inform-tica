@@ -1,19 +1,19 @@
 :root {
-  --bg-color: #121212; /* negro suave */
-  --text-color: #ffffff; /* blanco puro */
-  --text-secondary: #bbbbbb; /* gris claro */
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --text-secondary: #bbbbbb;
   --text-accent: #f4808a;
-  --card-bg: #1e1e1e; /* gris oscuro */
+  --card-bg: #1e1e1e;
   --btn-text-on-accent: #0a0a0a;
 }
 
 html.theme-light {
-  --bg-color: #f5f5f5; /* gris claro */
-  --text-color: #111111; /* texto oscuro */
-  --text-secondary: #424242; /* gris medio */
-  --text-accent: #9e001d; /* rojo puro, menos anaranjado */
-  --card-bg: #ffffff; /* blanco puro */
-  --btn-text-on-accent: #ffffff; /* texto blanco sobre rojo */
+  --bg-color: #f5f5f5;
+  --text-color: #111111;
+  --text-secondary: #424242;
+  --text-accent: #9e001d;
+  --card-bg: #ffffff;
+  --btn-text-on-accent: #ffffff;
 }
 
 html.theme-light .theme-icon {
@@ -53,13 +53,12 @@ html.font-large {
   font-size: 20px;
 }
 
-/* texto base que responde al tema */
 .theme-text {
   color: var(--text-color);
 }
 
 button {
-  font-size: 1em; /* hereda de html */
+  font-size: 1em;
   font-family: "Poppins", sans-serif;
 }
 
@@ -75,7 +74,6 @@ button {
   font-weight: bold;
 }
 
-/* Filtro botones adaptables */
 .btn-filter {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -110,7 +108,7 @@ button {
   justify-content: center;
   align-items: center;
   position: relative;
-  min-height: 300px; /* ajustable */
+  min-height: 300px;
 }
 
 .ellipse-shadow {
@@ -185,14 +183,14 @@ button {
 
 .theme-wrapper.active-theme .theme-icon {
   outline: 2px solid #ffffff;
-  border-radius: 50%; /* para hacerlo circular */
+  border-radius: 50%;
 }
 
 .theme-icon {
   position: relative;
   z-index: 1;
 }
-/* Mejora espaciado y sombra de ítems */
+
 .tesinas-carousel > .tesina-item {
   flex: 0 0 auto;
   scroll-snap-align: start;
@@ -212,7 +210,6 @@ button {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* Agrega margen lateral para que no queden pegados al borde */
 .tesinas-carousel {
   padding: 1rem 0.5rem 2rem 0.5rem;
 }
@@ -225,7 +222,6 @@ button {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* WebKit (Chrome, Edge) */
 .tesinas-carousel::-webkit-scrollbar {
   height: 8px;
 }
@@ -244,7 +240,6 @@ button {
   background: transparent;
 }
 
-/* Ajuste inputs para respetar variables existentes */
 .theme-input {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -265,7 +260,6 @@ button {
   box-shadow: 0 0 6px var(--text-accent, #97262a);
 }
 
-/* Labels y textos que respetan tema */
 .text-theme {
   color: var(--text-color);
   font-weight: 600;
@@ -273,7 +267,6 @@ button {
   display: block;
 }
 
-/* Estilo para la respuesta (no editable, no seleccionable) */
 .answer-output {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -290,7 +283,6 @@ button {
   line-height: 1.4;
 }
 
-/* Evitar que cambie color al seleccionar */
 .answer-output::selection {
   background: transparent;
   color: inherit;
@@ -312,7 +304,7 @@ button {
 }
 
 .btn-red:hover {
-  background-color: rgb(243, 166, 173); /* tono accesible cercano al hover */
+  background-color: rgb(243, 166, 173);
 }
 
 button.ask-btn {
@@ -328,5 +320,5 @@ button.ask-btn {
 .ask-img {
   max-width: 100%;
   height: auto;
-  max-height: 400px; /* o ajustalo según tu diseño */
+  max-height: 400px;
 }
