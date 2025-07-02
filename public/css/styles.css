@@ -87,6 +87,11 @@ button {
   border-color: var(--text-accent);
 }
 
+.btn-filter:hover {
+  background-color: var(--text-accent);
+  color: var(--btn-text-on-accent);
+  border-color: var(--text-accent);
+}
 .card-img-top {
   object-fit: cover;
   height: 200px;
