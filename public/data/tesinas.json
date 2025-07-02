@@ -3,30 +3,35 @@
     "autor": "Autor X",
     "categoria": "UX",
     "descripcion": "Descripción corta",
+    "link": "https://www.instagram.com/",
     "nombre": "Tesina 1"
   },
   {
     "autor": "Autor Y",
     "categoria": "UX",
     "descripcion": "Descripción corta",
+    "link": "https://ejemplo.com/tesina2",
     "nombre": "Tesina 2"
   },
   {
     "autor": "Autor Z",
     "categoria": "UX",
     "descripcion": "Descripción corta",
+    "link": "https://ejemplo.com/tesina2",
     "nombre": "Tesina 3"
   },
   {
     "autor": "Autor A",
     "categoria": "IA",
     "descripcion": "Descripción corta",
+    "link": "https://ejemplo.com/tesina2",
     "nombre": "Tesina 6"
   },
   {
     "autor": "Autor A",
     "categoria": "Web Design",
     "descripcion": "Descripción corta",
+    "link": "https://ejemplo.com/tesina2",
     "nombre": "Tesina 4"
   }
 ]

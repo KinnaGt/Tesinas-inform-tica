@@ -5,6 +5,7 @@
   --text-accent: #f4808a;
   --card-bg: #1e1e1e;
   --btn-text-on-accent: #0a0a0a;
+  --btn-red-hover: #f3a6ad;
 }
 
 html.theme-light {
@@ -14,6 +15,7 @@ html.theme-light {
   --text-accent: #9e001d;
   --card-bg: #ffffff;
   --btn-text-on-accent: #ffffff;
+  --btn-red-hover: #700015fd;
 }
 
 html.theme-light .theme-icon {
@@ -317,13 +319,8 @@ button {
 }
 
 .btn-red:hover {
-  background-color: rgb(243, 166, 173);
-}
-
-button.ask-btn {
-  padding: 0.5rem 1.2rem;
-  font-size: 0.9rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  background-color: var(--btn-red-hover, #f3a6ad);
+  color: var(--btn-text-on-accent);
 }
 
 .ask-section > * {

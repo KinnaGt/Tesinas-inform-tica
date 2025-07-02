@@ -62,21 +62,22 @@ function setupAccessibilityMenu() {
   settingsBtn.addEventListener("click", () => {
     menu.style.display = menu.style.display === "block" ? "none" : "block";
   });
-
   window.setFontSize = function (size) {
     const html = document.documentElement;
     html.classList.remove("font-small", "font-medium", "font-large");
     html.classList.add(`font-${size}`);
+    localStorage.setItem("fontSize", size); // ← Guarda selección
 
     fontButtons.forEach((btn) => btn.classList.remove("active-btn"));
-
     document
       .querySelector(`.font-btn[onclick="setFontSize('${size}')"]`)
       ?.classList.add("active-btn");
 
     menu.style.display = "none";
   };
-  setFontSize("medium");
+
+  const savedFontSize = localStorage.getItem("fontSize") || "medium";
+  setFontSize(savedFontSize); // ← Restaura selección
 
   const darkBtn = document.getElementById("dark-theme-btn");
   const lightBtn = document.getElementById("light-theme-btn");
@@ -85,6 +86,7 @@ function setupAccessibilityMenu() {
     const html = document.documentElement;
     html.classList.remove("theme-dark", "theme-light");
     html.classList.add(`theme-${theme}`);
+    localStorage.setItem("theme", theme);
 
     document
       .querySelectorAll(".theme-wrapper")
@@ -117,8 +119,16 @@ function setupAccessibilityMenu() {
       setTheme("light");
     }
   });
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  document.documentElement.classList.add(`theme-${savedTheme}`);
+  updateThemeImages(savedTheme);
 
-  setTheme("dark");
+  // Marcar el wrapper activo
+  document
+    .querySelectorAll(".theme-wrapper")
+    .forEach((w) => w.classList.remove("active-theme"));
+  const activeWrapper = document.getElementById(`${savedTheme}-wrapper`);
+  if (activeWrapper) activeWrapper.classList.add("active-theme");
 }
 
 function loadTesinas() {
