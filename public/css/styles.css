@@ -34,6 +34,13 @@ body {
   color: var(--text-color);
 }
 
+.subtitle-s {
+  color: var(--text-color);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.5;
+  text-align: center;
+}
+
 .subtitle-md {
   color: var(--text-secondary);
   font-size: clamp(1rem, 2vw, 1.25rem);
