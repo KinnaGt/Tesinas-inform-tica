@@ -1,37 +1,9 @@
 [
   {
-    "autor": "Autor X",
+    "autor": " Villanueva Jimena Magali ",
     "categoria": "UX",
-    "descripcion": "Descripción corta",
-    "link": "https://www.instagram.com/",
-    "nombre": "Tesina 1"
-  },
-  {
-    "autor": "Autor Y",
-    "categoria": "UX",
-    "descripcion": "Descripción corta",
-    "link": "https://ejemplo.com/tesina2",
-    "nombre": "Tesina 2"
-  },
-  {
-    "autor": "Autor Z",
-    "categoria": "UX",
-    "descripcion": "Descripción corta",
-    "link": "https://ejemplo.com/tesina2",
-    "nombre": "Tesina 3"
-  },
-  {
-    "autor": "Autor A",
-    "categoria": "IA",
-    "descripcion": "Descripción corta",
-    "link": "https://ejemplo.com/tesina2",
-    "nombre": "Tesina 6"
-  },
-  {
-    "autor": "Autor A",
-    "categoria": "Web Design",
-    "descripcion": "Descripción corta",
-    "link": "https://ejemplo.com/tesina2",
-    "nombre": "Tesina 4"
+    "descripcion": "Omnially es una app web para crear lienzos dinámicos y proyectarlos en dispositivos físicos. Se rediseñó su front-end para mejorar la interfaz y la experiencia del usuario, reorganizando funciones clave y centralizando integraciones. Se aplicaron estudios de usabilidad y diseño centrado en el usuario para validar mejoras, implementando vistas más intuitivas y planificando futuras actualizaciones.",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/176310",
+    "nombre": "Reingeniería de la Interfaz de usuario de Omnially"
   }
 ]
