@@ -1,15 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   const includes = document.querySelectorAll("[data-include-html]");
 
-  // Convertimos el forEach en una lista de promesas
   const promises = Array.from(includes).map(async (el) => {
     const file = el.getAttribute("data-include-html");
     try {
       const resp = await fetch(file);
       if (resp.ok) {
         el.innerHTML = await resp.text();
+
+        // Inicia menú de accesibilidad si corresponde
         if (file.includes("top_bar.html")) {
           setupAccessibilityMenu();
+        }
+
+        // Inicia chatbot si corresponde
+        if (file.includes("questions.html")) {
+          if (typeof initChatbot === "function") initChatbot();
         }
       } else {
         el.innerHTML = "No se pudo cargar " + file;
@@ -21,19 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Promise.all(promises).then(() => {
     loadTesinas();
-
-    const askBtn = document.getElementById("askButton");
-    const input = document.getElementById("questionInput");
-    const output = document.getElementById("answerOutput");
-
-    if (askBtn && input && output) {
-      askBtn.addEventListener("click", () => {
-        const value = input.value.trim();
-        output.textContent = value
-          ? "Gracias por tu pregunta. Un asesor académico te responderá a la brevedad."
-          : "Por favor escribí una pregunta.";
-      });
-    }
 
     document.querySelectorAll(".btn-filter").forEach((btn) =>
       btn.addEventListener("click", () => {
@@ -49,6 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       })
     );
+    // Ahora sí: cargar chatbot si los elementos están en el DOM
+    if (document.getElementById("askButton")) {
+      initChatbot(); // Función que tenés que mover a una función aparte
+    }
   });
 });
 
