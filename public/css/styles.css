@@ -28,10 +28,12 @@ body {
   font-family: "Poppins", sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 #accessibility-bar .theme-icon img {
   width: 1.5em; /* 1.5 veces el tamaño de la letra */
   height: 1.5em;
 }
+
 .accessibility-text {
   font-size: var(--font-size-base);
   color: var(--text-color);
@@ -111,6 +113,14 @@ button {
   color: var(--btn-text-on-accent);
   border-color: var(--text-accent);
 }
+
+.card-theme {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 2px solid var(--text-secondary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .card-title {
   font-size: 1.1rem;
   font-weight: 300;
@@ -129,6 +139,21 @@ button {
   object-fit: contain;
   object-position: center;
   display: block;
+}
+
+@media (max-width: 576px) {
+  .card-theme {
+    max-width: 90vw;
+    margin: 0 auto 1rem;
+  }
+
+  .card-img-top {
+    height: 150px; /* menos alto en móvil */
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
 }
 
 .title-xl {
@@ -250,13 +275,6 @@ button {
   scroll-snap-align: start;
   width: 300px;
   transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card-theme {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border: 2px solid var(--text-secondary);
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .tesinas-carousel > .tesina-item:hover {
