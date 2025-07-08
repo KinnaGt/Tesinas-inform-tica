@@ -157,8 +157,8 @@ function loadTesinas() {
             tesina.title
           )}" class="text-decoration-none">
             <div class="card card-theme border-0 h-100 shadow-sm">
-              <img src="${banner}" class="card-img-top" alt="Banner ilustrativo para la tesina ${
-          tesina.title
+              <img src="${banner}" class="card-img-top" alt="Banner ilustrativo de la categoria ${
+          tesina.filter
         } realizada por ${tesina.authors}">
               <div class="card-body">
                 <h3 class="card-title">${tesina.title}</h3>
