@@ -28,7 +28,10 @@ body {
   font-family: "Poppins", sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+#accessibility-bar .theme-icon img {
+  width: 1.5em; /* 1.5 veces el tamaño de la letra */
+  height: 1.5em;
+}
 .accessibility-text {
   font-size: var(--font-size-base);
   color: var(--text-color);

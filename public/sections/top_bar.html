@@ -1,13 +1,16 @@
 <!-- TopBar de accesibilidad -->
 <div id="accessibility-bar" style="
   position: fixed; top: 0; left: 0; right: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color); padding: 8px 16px;
+  background-color: transparent; /* transparente */
+  color: var(--text-color);
+  padding: 8px 16px;
   display: flex; justify-content: flex-end; align-items: center;
   z-index: 9999; font-family: 'Poppins', sans-serif;
+  box-shadow: none; /* sin sombra */
 ">
-  <button id="acc-settings-btn" aria-label="Accesibilidad" class="theme-icon">
-    <img src="img/settings_icon.png" alt="Accesibilidad" class="icon-img">
+  <button id="acc-settings-btn" aria-label="Accesibilidad" class="theme-icon"
+    style="background: none; border: none; padding: 0; cursor: pointer;">
+    <img src="img/settings_icon.png" alt="Accesibilidad" style="width: 2.5em; height: 2.5em;">
   </button>
 
 
