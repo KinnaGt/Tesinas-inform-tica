@@ -28,7 +28,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <button onclick="history.back()" class="btn btn-red mb-3">Volver</button>
-                        <h1 id="tesina-title" class="title-md mb-3"></h1>
+                        <h1 id="tesina-title" class="title-s mb-3"></h1>
                         <h2 class="mt-4 subtitle-s">
                             Por <span id="tesina-author"></span>
                         </h2>
@@ -61,12 +61,12 @@
             fetch("data/tesinas.json")
                 .then(res => res.json())
                 .then(tesinas => {
-                    const tesina = tesinas.find(t => t.nombre === nombre);
+                    const tesina = tesinas.find(t => t.title === nombre);
                     if (!tesina) return;
 
-                    document.getElementById("tesina-title").textContent = tesina.nombre;
-                    document.getElementById("tesina-author").textContent = tesina.autor || "Autor desconocido";
-                    document.getElementById("tesina-desc").textContent = tesina.descripcion || "Sin descripción.";
+                    document.getElementById("tesina-title").textContent = tesina.title;
+                    document.getElementById("tesina-author").textContent = tesina.authors || "Autor desconocido";
+                    document.getElementById("tesina-desc").textContent = tesina.resume || "Sin descripción.";
                     document.getElementById("tesina-banner").src = tesina.bannerUrl || "img/default_banner.png";
                     document.getElementById("tesina-link").href = tesina.link || "#";
 

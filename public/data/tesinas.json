@@ -1,23 +1,416 @@
 [
   {
-    "autor": " Villanueva Jimena Magali ",
-    "categoria": "UX",
-    "descripcion": "Omnially es una app web para crear lienzos dinámicos y proyectarlos en dispositivos físicos. Se rediseñó su front-end para mejorar la interfaz y la experiencia del usuario, reorganizando funciones clave y centralizando integraciones. Se aplicaron estudios de usabilidad y diseño centrado en el usuario para validar mejoras, implementando vistas más intuitivas y planificando futuras actualizaciones.",
-    "link": "https://sedici.unlp.edu.ar/handle/10915/176310",
-    "nombre": "Reingeniería de la Interfaz de usuario de Omnially"
+    "authors": "Pacheco, Federico",
+    "date": "2023",
+    "filter": "UX",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/152431",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "El presente trabajo de tesina de grado abarca la investigación, el estudio y análisis de la accesibilidad en videojuegos independientes, el desarrollo del plugin \"Godot Subtitles\" para el motor de videojuegos Godot Engine y su publicación en el repositorio de software GitHub, y la elaboración de un \"Catálogo de buenas prácticas en el diseño de accesibilidad de videojuegos\". En este trabajo se realiza un estudio sobre el surgimiento de la accesibilidad desde sus inicios hasta el presente, sobre su impacto en la era digital, haciendo foco en el desarrollo de videojuegos. Los conceptos y temáticas asociadas a la accesibilidad se analizan desde el punto de vista del jugador y del desarrollador, con especial atención en las discapacidades auditivas e intentando comprender la relación que existe entre estas dos perspectivas. Se analizan varios casos de estudio de desarrollos independientes para entender las limitaciones y dificultades en el desarrollo que pueden impactar en la accesibilidad.",
+    "title": "Accesibilidad en videojuegos: su aporte a la inclusión y al proceso de creación de videojuegos inclusivos en la industria independiente"
   },
   {
-    "autor": "Jacinto y Moschettoni",
-    "categoria": "IA",
-    "descripcion": "Las redes neuronales son efectivas en tareas complejas, pero su falta de interpretabilidad es una desventaja. Para abordarlo, se estudió la extracción de reglas como forma de explicar su funcionamiento. En esta tesina se desarrolló FORxREN, un algoritmo que genera reglas claras y fieles al modelo, facilitando la comprensión de sus decisiones.",
-    "link": "https://sedici.unlp.edu.ar/handle/10915/164808",
-    "nombre": "Técnicas de extracción de reglas en redes neuronales artificiales"
+    "authors": "Toledo, Maximiliano Jonathan",
+    "date": "2021",
+    "filter": "UX",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/125055",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "Actualmente muchas de las actividades de nuestra vida cotidiana se encuentran integradas en una aplicación web. Toda la información de los hechos que acontecen en el mundo está a un simple clic, por eso es de suma importancia lograr que una gran parte de la sociedad tenga la posibilidad de acceder al contenido presente en la web. Aquí es donde la accesibilidad web se convierte en un recurso fundamental para combatir con la famosa brecha digital y permitir que el contenido web sea accesible a la mayor cantidad de personas posibles. Para brindar accesibilidad en un sitio web, es muy importante integrarla al proceso de desarrollo. Para facilitar esta integración y a la detección de problemas de accesibilidad, en esta tesina se desarrolló una herramienta automática para la detección y reporte de este tipo de problemas.",
+    "title": "Detección automática de problemas de accesibilidad a partir de eventos de interacción de usuario"
   },
   {
-    "autor": "Federico Pacheco",
-    "categoria": "UX",
-    "descripcion": "La tesina investiga la accesibilidad en videojuegos independientes, con foco en discapacidades auditivas. Incluye el desarrollo del plugin “Godot Subtitles” para Godot Engine, su publicación en GitHub y la creación de un catálogo de buenas prácticas. Analiza la evolución histórica de la accesibilidad, su impacto en los videojuegos y las perspectivas tanto del jugador como del desarrollador, incluyendo casos de estudio para identificar limitaciones comunes.",
-    "link": "https://sedici.unlp.edu.ar/handle/10915/164808",
-    "nombre": "Accesibilidad en videojuegos"
+    "authors": "Altolaguirre, María Paula; Torales, Rodrigo",
+    "date": "2020",
+    "filter": "UX",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/118250",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "Confección de kit formado por un bastón, lente y aplicación para Android. Se puede apreciar que el bastón y el lente pueden ser configurados desde la aplicación la cual permite además, consultar servicios web posicionando ómnibus y recorridos para la ciudad de La Plata.",
+    "title": "Kit basado en sensores para personas con disminución visual y ciegas"
+  },
+  {
+    "authors": "Navas Gago, Maximiliano; Navajas, Leandro",
+    "date": "2019",
+    "filter": "UX",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/119993",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "Esta tesina desarrolla un chat dotado con Inteligencia Artificial, destinado a aportar un nuevo mecanismo de comunicación. Entendiendo el escenario de la UNLP, optamos por una solución inclusiva, generando así un “chatbot accesible”. Es importante entender que la solución es genérica y para esto ideamos una arquitectura de aplicación escalable, basada en módulos con sus respectivas responsabilidades. Una vez finalizada realizamos validaciones de accesibilidad y el testing de usuarios finales.",
+    "title": "Chatbot accesible para el Área de Asuntos Estudiantiles (UNLP)"
+  },
+  {
+    "authors": "Murga, Verónica Soledad",
+    "date": "2020",
+    "filter": "UX",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/118536",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "En la actualidad más empresas se insertan en el mercado virtual y ya es bastante común que los usuarios busquen lo que necesitan en la web. Es por este motivo que ha incrementado la necesidad de enfocarse en aspectos de usabilidad y accesibilidad que antes no eran tenidos en cuenta. Creemos que es\nmuy importante que el usuario pueda acceder a la información de manera sencilla e intuitiva. Si bien hoy en día las empresas comenzaron a enfocarse bastante en las cuestiones de usabilidad, no alcanza para cubrir todos los aspectos necesarios para satisfacer a todos los tipos de usuarios que pueden llegar a utilizar la aplicación. En este trabajo proponemos herramientas para ayudar a mejorar la usabilidad de las aplicaciones web y que cada usuario pueda adaptarlo a su necesidad sin tener que esperar que el dueño del sitio lo haga. Nos enfocamos en desarrollar herramientas intuitivas para ser utilizadas por voluntarios novatos en el área de la informática permitiendo que cualquier usuario que quiera colaborar y enriquecer la comunidad sea bienvenido. Las herramientas desarrolladas permitirán reportar problemas de usabilidad en carácter de usability smells y a la vez solucionar dichos reportes. Nos enfocamos en el modelo de crowdsourcing\npermitiendo a cualquier usuario participar y enriquecer la comunidad.",
+    "title": "Herramienta visual colaborativa para la mejora de la usabilidad"
+  },
+  {
+    "authors": "Almendra, Federico; Martinez de Treviño, Juliana",
+    "date": "2020",
+    "filter": "UX",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/118530",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "A razón de los avances tecnológicos de los últimos años en el ambiente educativo, los tutores se encuentran ante la necesidad de reinventar los procesos de aprendizaje y de comunicación con los ingresantes. Desde el Programa de Tutorías, se acompaña personalmente a los alumnos a fin de facilitar su adaptación al nuevo ámbito y ayudarlos en la construcción de su rol como estudiantes. En este contexto, desarrollamos una herramienta de acompañamiento virtual\nque ayudaría a fortalecer la comunicación online como complemento del desarrollo del Programa de Tutorías, al acercamiento entre tutores y alumnos, y agilizaría la resolución de problemas administrativos, generando un apoyo tecnológico integral para los alumnos.",
+    "title": "E-TUTOR: Herramienta virtual para el Programa de Tutorías"
+  },
+  {
+    "authors": "Larroque, José Luis",
+    "date": "2017",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/59677",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "El objetivo de este trabajo de tesis es el desarrollo de un algoritmo que permite generar un índice de caminos entre dos artículos cualesquiera de Wikipedia, lo cual se logró a través de la adaptación de un algoritmo BFS preexistente. Este algoritmo fue desarrollado adaptando Wikipedia para ser procesada como un grafo en Giraph, un framework de procesamiento de grafos utilizado por grandes compañías como Facebook, Twitter, Yahoo, etc. La arquitectura de base utilizada fue Hadoop, a través de su modelo de procesamiento Map Reduce, en el cual Giraph se basa de soporte para la ejecución de algoritmos de procesamiento de grafos. La plataforma de cómputo utilizada para ejecutar este trabajo fue Amazon Web Services, a través de la funcionalidad Elastic Map Reduce. Al ser pago dicho entorno, se usó el mismo a través de una subvención para investigación.",
+    "title": "Indexado de Wikipedia a través de una arquitectura Map Reduce"
+  },
+  {
+    "authors": "Pérez, Emiliano Guillermo",
+    "date": "2011",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/4045",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "En el presente trabajo se propone un marco conceptual para desarrollar modelos de contexto dinámicos y se ofrece un framework diseñado para instanciar este tipo de modelos en aplicaciones context-aware. En el informe además se evalúa la postura de distintos autores sobre el tema y se llega a una interpretación dinámica de la relación contextual. Tomando como base esta interpretación del contexto se ofrece el marco conceptual y se lo compara con las soluciones convencionales al problema de modelado de contexto.\nLuego se detalla el framework, compuesto por un conjunto de abstracciones que permiten instanciar modelos de contexto de manera simple e intuitiva. Asimismo se aprovechan las ventajas del paradigma orientado a objetos para que dichas abstracciones ofrezcan una interfaz flexible y expresiva. El aporte práctico está principalmente orientado al desarrollo de aplicaciones web para dispositivos móviles, no solo porque esta configuración es cada vez más popular, sino también porque las aplicaciones context-aware se benefician especialmente de los periféricos que contienen dichos dispositivos actualmente (GPS, sensores, cámaras, etc.).",
+    "title": "Modelos de contexto: un enfoque dinámico"
+  },
+  {
+    "authors": "Nieto, Emiliano",
+    "date": "2013",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/46834",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "Cloud computing es un modelo de computación que permite demandar a través de internet recursos compartidos como procesamiento en servidores, almacenamiento, aplicaciones y servicios, los cuales pueden ser rápidamente aprovisionados y liberados sin ningún esfuerzo de administración por parte del proveedor de éstos servicios.\nLos tres servicios esenciales de Cloud Computing son Infraestructura como Servicio (IaaS), Plataforma como Servicio (PaaS) y Software como Servicio (SaaS).\nEl presente trabajo tiene como objetivo investigar el diseño de aplicaciones SaaS sobre Plataformas como Servicio, analizando las características propias de una aplicación SaaS en combinación con los servicios que ofrecen los diferentes proveedores de PaaS, de forma tal de evidenciar la problemática técnica que involucra esta combinación, con el fin de identificar conceptos de diseño y de arquitectura que permitan construir soluciones óptimas.",
+    "title": "Diseño de aplicaciones SaaS sobre plataformas de Cloud Computing"
+  },
+  {
+    "authors": "Tirabassi, Américo Natalio",
+    "date": "2011",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/46920",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "En este trabajo se propone la creación de un prototipo de sistema web de monitoreo satelital de vehículos para analizar datos provistos por dispositivos especiales de posicionamiento que se instalan en ellos. Se hace una introducción básica a GPS y Sistemas de Información Geográfica (SIG), explicando su funcionamiento y áreas en las que se utilizan. Se describen algunas de las diferentes aplicaciones posibles para SIG y la importancia de la información geográfica, su correcta administración y las herramientas disponibles para su análisis. Por último se describe el prototipo de sistema web, su funcionamiento y su modo de uso.",
+    "title": "Monitoreo satelital de vehículos mediante una aplicación web"
+  },
+  {
+    "authors": "Banchoff Tzancoff, Matías",
+    "date": "2011",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/47014",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "El objetivo de este trabajo de grado es realizar una comparación entre los desarrollos web anteriores a Websocket y los cambios introducidos por esta tecnología, las nuevas posibilidades que ofrece y las dificultades que plantea, de modo que se puedan responder preguntas como:\n- ¿Cambiará la manera en que los servidores manejan sus recursos?\n- ¿Habrá alguna mejora en el desempeño de las aplicaciones que usan Websocket con respecto a las que utilizan Comet?\n- ¿Cuál será el costo de migrar a Websocket, tanto del lado del cliente como del servidor?\n- ¿Qué repercusiones tendrá el uso de Websocket en la planificación y administración de una red destinada al web hosting?\n- ¿Cuáles son las nuevas oportunidades de integración que trae Websocket?",
+    "title": "Websocket: comparación de performance e implementación de aplicaciones web"
+  },
+  {
+    "authors": "Belingueres, Gabriel Alfredo",
+    "date": "2012",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/47139",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "Se investiga la utilización de las Conversaciones como abstracción para simplificar el desarrollo de aplicaciones Web programadas en Java, así también para mejorar la calidad de las mismas. Se propone e implementa una solución utilizando el Framework Struts 2, así como una aplicación que demuestre su uso.",
+    "title": "Una solución para el soporte de conversaciones en aplicaciones web Java"
+  },
+  {
+    "authors": "Djebaile, Miguel José",
+    "date": "2011",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/47010",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "El punto central de esta tesis es la inclusión de la práctica de refactoring dentro de una metodología de desarrollo de aplicaciones web existente. Es decir, se utiliza la técnica de refactoring (que siempre se relacionó con las metodologías ágiles y el código fuente) en el contexto del desarrollo de software dirigido por modelos (MDD).\nAnte la ausencia de herramientas de refactoring aplicadas al desarrollo Web dirigido por modelos, se desarrolla MagicUWE4R, que implementa los refactorings para el modelo de navegación y presentación de la metodología UWE. A su vez, se pone énfasis en el buen diseño de la herramienta, de manera que el motor de refactoring sea extensible para otros refactorings más complejos, mediante una implementación simple y elegante. Esto a causa de principalmente dos puntos claves: el uso de patrones de diseño y la composición de refactorings.",
+    "title": "MagicUWE4R: Una herramienta de refactoring en el modelado de aplicaciones web"
+  },
+  {
+    "authors": "Ianicelli, Agustín",
+    "date": "2015",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/48086",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "En el contexto de Internet de las Cosas, donde los objetos contarán incrementalmente con la capacidad de conectarse y compartir información, es necesario una arquitectura publish-to-hub que tiene como objetivo extender los beneficios de la comunicación publish-subscribe a dispositivos físicos que cuenten con recursos de computación y comunicación limitados tal cual sucede con los objetos que integran Internet de las Cosas. El esquema donde uno de los componentes (el “Hub”) recibe todas las peticiones de los clientes que deseen publicar alguna información. Las entidades (dispositivos y aplicaciones de software) de la red local que estén interesadas en alguno de los temas pueden suscribirse al tema específico para recibir actualizaciones de información. El trabajo aporta la extensión de una arquitectura pub-hub para permitir la publicación y suscripción de canales descriptos a partir de combinaciones de tags arbitrarios basados en lenguaje natural, el descubrimiento del hub en la red y la comunicación server push a objetos de la red.",
+    "title": "Una arquitectura PUB-HUB para la Internet de las cosas"
+  },
+  {
+    "authors": "Defalco, Magalí Eliana; Rajoy, Gaspar",
+    "date": "2015",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/50072",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "El desarrollo de SiMor nace con la intención de proporcionar una herramienta de código libre, capaz de analizar sitios web completos con el fin de verificar el cumplimiento de las pautas de accesibilidad establecidas por la W3C, e informar al desarrollador los errores encontrados y las posibles soluciones a dichas fallas, con el fin de facilitar su labor a la hora de crear contenido accesible para una Web inclusiva.\nCon esta tesina también se pretenden disminuir las barreras de acceso a la información con las que deben lidiar a diario personas con capacidades funcionales diferentes, y de esta manera fomentar aún más el uso de las tecnologías digitales como medio de información y de acceso a productos y servicios.\nAl ser una herramienta accesible en sí misma, el objetivo no es solamente contribuir a que los contenidos generados sean accesibles sino también que pueda ser utilizada por cualquier usuario, independientemente de sus habilidades motoras, sensoriales y cognitivas.",
+    "title": "SiMor"
+  },
+  {
+    "authors": "Malvaso, Marisa Andrea",
+    "date": "2000",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/3865",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "Este proyecto se concentró especialmente en los métodos utilizados para la captura y filtrado de paquetes, y para ello, el primer paso fue la especificación de la plataforma seleccionada: sistemas Unix o basados en Unix (sistemas Linux). Esta selección se fundamentó, principalmente, por su performance, confiabilidad y alta disponibilidad de herramientas que dichas plataformas soportan. La flexibilidad de estos sistemas es aún mayor si se considera que el código fuente de algunos de ellos es abierto (como es el caso de Linux). Por otra parte, las herramientas de monitoreo, requieren determinadas características que estos sistemas pueden brindar (manejo de threads, manejo de tareas en forma automática mediante scripts,…).\nEl control de procesos provisto por los sistemas basados en Unix incluye la creación de nuevos procesos, la ejecución de programas y la terminación de procesos. Contando solamente con lo recién mencionado, la única manera de que los procesos intercambien información es transfiriéndola a través de archivos abiertos mediante las llamadas al sistema fork o exec, o a través del sistema de archivos (file system). En esta implementación se utilizó la segunda forma de comunicación (accediendo a los archivos mediante funciones del sistema de archivos).",
+    "title": "HTTP Sniffer. Monitoreo de tráfico HTTP"
+  },
+  {
+    "authors": "Córdoba, Tomás E.",
+    "date": "2010",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/4028",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "En primera instancia se proveerá la funcionalidad de una plataforma de hipermedia física con objetivo de aplicarla en un ámbito académico. Se desarrollará como aplicación Web y se utilizará como metodología de sensado los códigos de barra quick response, analizando el rendimiento de estos para este tipo de sistemas. La segunda contribución, es integrar el concepto de aplicación de hipermedia física con las metodologías de comunicación que utilizan las redes sociales actuales.",
+    "title": "Aplicaciones de hipermedia física en el ámbito académico"
+  },
+  {
+    "authors": "Margiotta, Hugo D.",
+    "date": "2012",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/47052",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "El objetivo principal de esta tesis, es presentar un método para construir adaptaciones (desarrolladas a través de scripts), que puedan ser reutilizadas a lo largo de diversas aplicaciones, pertenecientes a una misma familia. Esta meta, se apoya, en la utilización de un framework, que se basa en la estructura presentada en [3], el cual provee un ambiente de desarrollo que permite construir adaptaciones, con un nivel de abstracción suficiente para ser reutilizables. En lo que respecta a adaptaciones Web, muchos trabajos se han desarrollado en los últimos años, algunos de ellos, se encuentran relacionados con las adaptaciones o el entorno que se intentan construir aquí. Para lograr un mejor contraste y obtener una mayor experiencia, en la lectura de esta tesis, es que, a lo largo de las secciones de la misma, se analizan trabajos que se encuentran relacionados de diversas maneras, en general, apuntando principalmente al tema de adaptaciones o personalización en la Web. Estos trabajos, que pueden llegar a aportar desde técnicas o tecnologías hasta conceptos o tendencias, se analizan y comparan dentro del contexto de la tesis. Algunos de ellos, incluso, serán analizados desde distintos puntos vista a través de las diferentes secciones.",
+    "title": "Adaptabilidad en familia de aplicaciones web"
+  },
+  {
+    "authors": "Zanotti, Martín Sebastián",
+    "date": "2015",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/59499",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "Hoy en día la tecnología se integra y relaciona a la mayoría de las actividades de nuestra vida cotidiana pero aun existen dificultades para que la misma sea accesible para todos. Internet constituye la mayor fuente actual del conocimiento y su inaccesibilidad marca una de las mayores desventajas en la brecha digital [Toledo et al. 2005]. Aquí propondremos un enfoque para mejorar la accesibilidad en las aplicaciones web centrado en beneficiar a aquellas personas que poseen una discapacidad visual. En general, la información en las páginas web se fragmenta y organiza en grupos visualmente reconocibles, lo cual sumado a un conjunto de conocimientos previos adquiridos por los usuarios, podemos identificar y comprender dicha información y el rol que cumple. Gracias a esto, los usuarios logran procesar rápidamente la información no por su contenido sino por su diseño y disposición, ayudándolos a ubicarse en el contexto de la aplicación web. Sin embargo esto no resulta igual de simple para usuarios con dificultades visuales quienes no poseen acceso a dicha información visual. Aquí nos enfocaremos en el desarrollo de un sistema que ayude a capturar esta información de las páginas web para hacerla accesible (mediante la transcodificación) a usuarios con discapacidad visual y ofrezca una plataforma de crowdsourcing como método para escalar esta solución a la gran cantidad de páginas web presentes en la internet.",
+    "title": "Accesibilidad y crowdsourcing: uso de etiquetas semánticas para mejorar la accesibilidad de aplicaciones web"
+  },
+  {
+    "authors": "Grigera, Julián",
+    "date": "2010",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/46842",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "El desarrollo de aplicaciones web presenta múltiples problemas: la cantidad y frecuencia de los cambios en los requerimientos, junto con la disponibilidad de tiempos de desarrollo cada vez más cortos son dos de los más significativos. Para contrarrestar estos inconvenientes se han propuesto diferentes metodologías de desarrollo que contemplan las modificaciones y evolución de las aplicaciones de una manera controlada, entre las que se destacan Test Driven Development (una metodología ágil basada en tests de unidad) y Model Driven Architecture. La idea de este trabajo consiste en combinar las fortalezas de ambas metodologías para obtener un proceso de desarrollo de aplicaciones web robusto y con buena capacidad de respuesta ante los cambios, pero que también considere la navegación y presentación de la aplicación en etapas tempranas del desarrollo. La metodología también debe poseer facilidad para establecer requerimientos claros y la capacidad de comprobar la funcionalidad mediante tests en todo momento.",
+    "title": "Combinando TDD y MDA para desarrollar aplicaciones web"
+  },
+  {
+    "authors": "Palumbo, María Florencia; Tunessi, María Silvia",
+    "date": "2013",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/63225",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "MDA provee un conjunto de herramientas para especificar un sistema independientemente de la plataforma de implementación, elegir una plataforma para el sistema, y transformar las especificaciones de los sistemas a la misma. Todo esto se complementa con los objetivos de portabilidad, interoperabilidad y reusabilidad. Dentro de la aproximación MDA, tiene especial relevancia la existencia de transformaciones entre modelos. MDA permite reducir los costos de desarrollo de software, adaptarlo rápidamente a los cambios tecnológicos y a cambios en los requisitos, siempre manteniendo la consistencia entre los modelos y el código del software y así dando el protagonismo de la conducción del diseño y desarrollo a los modelos. Spring es un framework basado en J2EE que implementa el modelo MVC. Su gran ventaja es la modularidad definiendo funcionalidad e integrando diferentes tecnologías. Y los Web Services nos permiten comunicar diferentes aplicaciones de forma distribuida entre sí. Decidimos que MDA nos planteó una ágil y eficiente manera de definir nuestros modelos con la utilización del lenguaje UML, agregando información específica para poder generar la estructura de servicios y así mediante una serie de transformaciones derivar al esqueleto de servicios, interfaces y daos en el código correspondiente. De esta manera se logra reducir tiempos, errores y prestar una disposición para el buen uso que ofrece el framework.",
+    "title": "Arquitectura de servicios web basada en modelos: especificación gráfica y derivación automática del código"
+  },
+  {
+    "authors": "Apesteguía, Francisco",
+    "date": "2015",
+    "filter": "Web",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/48084",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "En el contexto del desarrollo colaborativo de software, la falta de conocimiento acerca de lo que está realizando cada participante en la tarea compartida (workspace awareness) y de las prácticas de desarrollo adoptadas (mejores prácticas), tiene un impacto negativo tanto en el proceso de desarrollo como en la calidad del producto final. Las violaciones a las buenas prácticas se detectan mediante revisiones manuales que bien pueden no realizarse bajo ciertas situaciones o, en caso de que se lleven a cabo, suelen ser más propensas a errores a medida que va aumentando la cantidad de buenas prácticas a controlar. Contando con un modelo semántico de las buenas prácticas y de las actividades realizadas en el proyecto, el conocimiento disponible puede ser fácilmente recuperado o explotado por un agente inteligente, para prevenir estas situaciones no deseadas. La motivación de este trabajo radica en proveer una plataforma que permita modelar y gestionar las buenas prácticas (con una definición semántica detallada de las mismas y de los procedimientos que involucran) y a su vez, mediante la recolección de información de las actividades del proyecto, logre detectar en el momento la ocurrencia de violaciones a las buenas prácticas definidas, y facilite su corrección mediante la distribución del conocimiento de la organización en el momento en que es relevante a las personas involucradas, dando como resultado un proceso de desarrollo más confiable y eficiente.",
+    "title": "Singapur - Una herramienta basada en tecnología semántica para capturar y diseminar el conocimiento sobre mejores prácticas en una organización"
+  },
+  {
+    "authors": "Goral, Gonzalo; Sívori, Jonatan",
+    "date": "2018",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/71297",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "La tecnología crece a pasos agigantados, es muy común utilizar hoy en día aplicaciones que hagan uso de mecanismos de sensados para proveernos diferentes servicios. Por ejemplo, se usan distintos mecanismos de sensados en particular para brindar juegos móviles.\nNear Field Communication (NFC) es una tecnología de comunicación inalámbrica de corto alcance y alta frecuencia que permite el intercambio de datos entre dispositivos. En esta tesina se exploró el uso de esta tecnología en particular para el desarrollo de un prototipo de Juego móvil de Postas basado en Posicionamiento. En particular, NFC requiere que los dispositivos móviles de los jugadores estén próximos para interactuar, simulando así la entrega de la\nposta. Este desarrollo implicó una investigación de la tecnología de sensado NFC, incluido el estudio de lenguajes de desarrollo móviles y el análisis de viabilidad de cada uno.\nSe propuso un modelo de solución para este tipo de juego, el cual fue usado de base para el desarrollo del prototipo.",
+    "title": "Explorando el uso de NFC en un juego de postas basadas en posicionamiento"
+  },
+  {
+    "authors": "Sala Espiell, Luis Manuel",
+    "date": "2016",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/58762",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "SIU Guaraní Mobile es una aplicación desarrollada para dispositivos móviles, la cual permitirá tanto a alumnos como a docentes operar sobre el sistema SIU Guaraní sin la necesidad de estar frente a una computadora, con la facilidad, disponibilidad y ubiquidad que un dispositivo móvil puede otorgar. Desde sus inicios se pensó para brindar un mejor servicio a los estudiantes sobre las cuestiones administrativas y poder estar siempre presente en el día a día del estudiante, incorporando aspectos sociales como visualizar compañeros cercanos en un mapa cuando se está próximo a la Facultad, teniendo la posibilidad de dejar un mensaje para poder ser visualizado por los mismos.",
+    "title": "SIU Guaraní Mobile"
+  },
+  {
+    "authors": "Vidal, Gabriel Adrián",
+    "date": "2016",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/58718",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "Inicialmente solo se desarrollaban aplicaciones con herramientas y lenguajes de bajo nivel, destinadas a un tipo de arquitectura en particular, los cuales requerían de complicadas instrucciones para completar su objetivo. Hace ya varios años se implementaron los lenguajes de alto nivel, permitiéndonos algo más de abstracción en el desarrollo y la consecuente portabilidad de las aplicaciones a través de diferentes sistemas operativos, donde el compilador automáticamente se encargará de la traducción al lenguaje de bajo nivel.\nEn la actualidad, adoptando el concepto de desarrollo dirigido por modelos, se pretende subir la apuesta para ahora abstraernos también del lenguaje de programación, con lo cual se han realizado productos de software, donde a partir del diseño y modelado, se produce la generación automática del código de la aplicación.\nLa tesina se enfoca específicamente en la generación de código para ser ejecutado en el sistema operativo Android. El objetivo de nuestro trabajo consiste en la comparación de las herramientas disponibles, para lo cual se logró identificar las más relevantes (App Inventor, Rational Rhapsody y Acceleo), analizar sus características y presentar ejemplos concretos de aplicación para cada una.",
+    "title": "Análisis de herramientas de generación automática de código Android a partir de modelos"
+  },
+  {
+    "authors": "Armendariz, Ignacio Enrique; Ecclesia, Sebastián Gabriel",
+    "date": "2015",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/48097",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "El objetivo de este trabajo es investigar sobre los aspectos relacionados con los cambios que se deben registrar en una Aplicación Web Móvil sensible al contexto, y cómo estos afectan el comportamiento de la aplicación. Se implementó un prototipo de aplicación web móvil sensible al contexto, para analizar las diferentes características que debe tener la misma. En el prototipo implementado se relevan los datos de los sensores que interesan considerar y se captan los cambios producidos en los valores sensados desde el dispositivo móvil para que se reflejen dichos cambios de manera automática en una Aplicación Web Móvil. Esto involucra implementar el mecanismo que refleje automáticamente el cambio en los valores de los sensores. A partir del prototipo implementado se logra una caracterización de este tipo de aplicaciones. Algunos de los sensores utilizados en el prototipo son: GPS, acelerómetro, giroscopio, sensor de luz y temperatura. El prototipo se implementó en el dominio turístico, es decir, al cambiar los datos de los sensores se actualiza la información turística al usuario, por ejemplo, mostrando los puntos de interés en su rango de visión (acorde a su posición actual y su orientación).",
+    "title": "Implementación de un prototipo de aplicación web móvil sensible al contexto"
+  },
+  {
+    "authors": "Vosou, Agustín; Martínez, Juan Pablo",
+    "date": "2014",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/63686",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "El Desarrollo de Software Dirigido por Modelos (Model Driven Development), es un paradigma cuyo uso ha venido en creciente aumento durante los últimos años y el mismo pretende mejorar, estandarizar y automatizar la construcción del software basándose en un proceso guiado por modelos y soportado por potentes herramientas.\nEs evidente que el desarrollo de software dirigido por modelos se encuentra en constante crecimiento, y esto queda reflejado por la gran cantidad de herramientas que existen para modelar aplicaciones, las cuales permiten transformar un modelo en código fuente.\nEn el mundo de las comunicaciones, sin embargo, para el caso específico de las plataformas Android, las herramientas existentes, con el adicional de ser limitadas en cuanto al código o binario generado, no permiten modelar y/o representar en forma completa una aplicación.\nPor estos motivos se ha decidido encarar el desarrollo de una herramienta que permita modelar una aplicación en forma íntegra para luego transformarlo en código fuente Android, con el fin de que el mismo pueda ser manipulado para lo que oportunamente se necesite.",
+    "title": "Derivación automática de código Android a partir de modelos gráficos"
+  },
+  {
+    "authors": "Brown Bartneche, Matías; Kimura, Isabel",
+    "date": "2015",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/64616",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "El ingreso a la universidad constituye una etapa compleja que implica el aprendizaje de nuevos lenguajes, saberes y costumbres de la cultura institucional de la cual se pretende formar parte. El objetivo de esta tesina es mitigar, a través de una herramienta tecnológica cercana a la cultura adolescente, la brecha existente entre los nuevos estudiantes y la cultura universitaria.\nEl uso de juegos en línea y la socialización a través de medios digitales, son elementos cotidianos para los jóvenes, que despiertan sus intereses y definen formas de expresión y comunicación. La ubicuidad es otra condición de las nuevas generaciones, siendo los smartphones los dispositivos móviles más elegidos para comunicarse y socializar.\nWhatsINFO es una aplicación móvil ludificada que acompaña y alienta la comunicación y participación de los ingresantes de la Facultad de Informática durante su trayecto en el curso de ingreso. WhatsINFO fue probada con un grupo de ingresantes de la Facultad de Informática durante el curso de ingreso 2014, arrojando resultados alentadores que permiten pensar su incorporación durante esta primera etapa de estudiante universitario.",
+    "title": "WhatsINFO: una aplicación móvil ludificada que promueve la integración de los ingresantes de la Facultad de Informática"
+  },
+  {
+    "authors": "Rodríguez, Pedro; Villalba, Joaquín",
+    "date": "2018",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/72126",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "El concepto ciudades inteligentes es un término que abarca diversos tópicos, entre ellos, encontramos el de transporte y telecomunicaciones, que son fundamentalmente los temas tratados en la presente tesina. En este contexto, como búsqueda de la integración de la telefonía celular con los automóviles, surge Steer, una aplicación móvil de infoentretenimiento a bordo del automóvil. Para la elaboración de esta solución, se analizaron las soluciones actuales, se estudiaron diferentes tecnologías de desarrollo y comunicación y se implementó una aplicación móvil para el automóvil que se integra con el Sistema de Estacionamiento medido y alerta de eventos durante la conducción del vehículo.",
+    "title": "Steer: una aplicación móvil para el auto que mantiene a los conductores conectados\ne informados sin distraerlos de la tarea de conducir"
+  },
+  {
+    "authors": "Colman, Marisa; Negri, Gabriel Alejandro",
+    "date": "2011",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/47049",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "Hoy, en que el mundo es cada más móvil, los usuarios desean acceder a la información desde cualquier lugar en que se encuentren. Con este argumento, los teléfonos inteligentes son lo más codiciado actualmente en tecnología. Las principales tendencias tecnológicas en el mercado móvil se centran en Cloud, Contexto y Movilidad. Se esperan nuevas experiencias para interactuar con dispositivos móviles, además de la inclusión de tecnologías como la Realidad Aumentada (RA) y Servicios Basados en Localización (LBS) que harán necesario un replanteo de los modelos de negocios actuales para considerar estas circunstancias. RA sobre SBL serán los líderes en tecnología móvil integrada en el mercado. La proliferación de teléfonos con GPS y brújula digital ya ha dado lugar a una serie de aplicaciones de RA basado en plataformas de localización. La combinación de RA con LBS permite contenido gráfico relacionado con la posición del usuario, convirtiéndolo en una de la interfaz de usuario más intuitiva disponible actualmente en el móvil y también hace que el consumo de información del contexto sea mas entretenida.",
+    "title": "Una aplicación de realidad aumentada en el ámbito universitario"
+  },
+  {
+    "authors": "Bernal, Juan Ignacio; Zurita, Alejandro Enrique",
+    "date": "2017",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/60000",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "El presente trabajo de grado plantea el desarrollo de una herramienta que permite hacer uso de un smartphone para llevar a cabo la etapa de relevamiento en el marco de un test de penetración de redes inalámbricas dado que las herramientas disponibles no son de gran aceptación por las limitaciones y las complicaciones que presentan para su uso. Consecuentemente, para el desarrollo de dicha herramienta se procede a realizar un estudio de las soluciones actuales, identificando sus problemáticas, con el objetivo de arribar a la descripción e implementación de una aplicación nativa para el sistema operativo Android, la cual facilita la tarea de relevamiento al auditor.",
+    "title": "Uso de smartphones para auditar la seguridad de redes inalámbricas"
+  },
+  {
+    "authors": "Álvarez, Mauro Daniel; Rufrancos, Federico",
+    "date": "2016",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/58933",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "Esta tesina de grado fue concebida con el objetivo de realizar un estudio exhaustivo sobre la problemática de la discapacidad conocida como sordera. Dicho estudio abarca desde conceptos de índole técnica, pasando por el desarrollo de una aplicación que acompaña a la tesina, así como también, la investigación y prueba de herramientas asistivas, que, si bien están orientadas a esta discapacidad, las mismas cumplen funciones distintas o, las provistas, no son suficientes para asistir en forma completa en la comunicación de una persona con sordera.\nLa aplicación de la tesina en cuestión, fue bautizada con el nombre de TalkLouder!. La misma sufrió una serie de cambios importantes desde que se gestó la idea inicial. Estos cambios van desde la implementación de nuevas ideas a modificaciones de la interfaz de usuario.\nTodo esto arrojó como resultado una aplicación para el sistema operativo Android, la cual permite a los usuarios sordos/hipoacúsicos comunicarse con personas oyentes. Entre los múltiples aspectos que TalkLouder! presenta se encuentran: la selección de frases precargadas y categorizadas, la búsqueda de frases de acuerdo al contexto,utilizando geolocalización, la creación de nuevas categorías de frases, etc.\nEn resumen se trata de una aplicación innovadora, la cual está orientada a un público específico, particularmente los usuarios con algún grado de discapacidad auditiva.",
+    "title": "Talk-Louder!"
+  },
+  {
+    "authors": "Lus, María Laura; Ramírez, Javier",
+    "date": "2022",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/142875",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "La Ciencia Ciudadana involucra al público en proyectos de investigación científica. Las tareas de los participantes, denominados científicos ciudadanos, pueden ser simples y no necesitar ningún conocimiento especial, como por ejemplo contar elementos que aparecen en una fotografía o bien responder una serie de preguntas sobre un ambiente que se está observando. El presente trabajo presenta un framework Android para construir aplicaciones móviles que permitan la recolección de muestras utilizando las herramientas que brindan los dispositivos móviles, como puede ser geolocalización o toma de fotografías. Está orientado a los proyectos de recolección, que son los que requieren recolectar muestras del medio físico, y más específicamente a los que requieren recolectar muestras haciendo uso de dispositivos móviles.",
+    "title": "Samplers: Framework para construir aplicaciones Android para recolectar muestras en\nproyectos de Ciencia Ciudadana"
+  },
+  {
+    "authors": "Rojas Lara, Alex; Valentini Mac Adden, Nicolás",
+    "date": "2020",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/118539",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "Esta es una tesina que se encuentra estrictamente relacionada con los conceptos de ciencia abierta y ciencia ciudadana y busca colaborar de algún modo con estos movimientos.\nLa forma de colaboración es mediante la implementación de un sistema que permita a los científicos generar de manera uniforme una secuencia de pasos para la toma de muestras que sean necesarias para cualquier proyecto. Por otra parte, también permite a ciudadanos que quieran participar de estos proyectos recolectar muestras siguiendo la secuencia de pasos que los científicos hayan definido previamente.\nSe buscó solucionar la falta de aplicaciones que se enfoquen en la recolección de datos y que a la vez se apoyen en tecnología móvil. Si bien existen aplicaciones similares, estas son más de propósito general, por lo que Muestre.AR vendría a suplir esta carencia.\nLa forma de resolverlo fue mediante la creación de una aplicación web centralizada que es donde los científicos van a poder crear o editar sus proyectos y una única aplicación móvil que es donde los ciudadanos van a poder participar de los proyectos creados previamente por los científicos en la aplicación web y van a poder realizar la recolección de muestras.",
+    "title": "Samplers 2"
+  },
+  {
+    "authors": "Jara, Jorge Domingo",
+    "date": "2020",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/118525",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "Existen numerosos estudios que evidencian que el uso de aplicaciones con Realidad Aumentada y Realidad Virtual por parte de los enfermos, contribuyen al alivio del dolor y aumento de la relajación durante las sesiones del tratamiento. En este contexto, se diseñó e implementó una aplicación móvil con realidad aumentada llamada ERA, como paratexto de un libro para niñas y niños llamado \"Kota Corta\", producto de un proyecto de la Facultad de Artes. La mencionada aplicación tiene por finalidad contribuir a sobrellevar tratamientos prolongados de niños y niñas, sumando al libro en papel, recursos como el audio de los textos, la incorporación de animaciones de los personajes y un conjunto de juegos didácticos e interactivos.",
+    "title": "ERA: Entretenidos con Realidad Aumentada"
+  },
+  {
+    "authors": "Becerra, Manuel Olegario",
+    "date": "2020",
+    "filter": "Android",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/118541",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "A partir de la sanción de la Ley No 13.627, se implementó en toda la provincia de Buenos Aires, con carácter obligatorio, el Documento Único Equino (DUE) para la identificación y traslado de la especie equina. Por tales motivos, surge la necesidad de desarrollar e implementar un Sistema Informático de Gestión del Documento Único Equino, del Ministerio de Agroindustria de la Provincia de Buenos Aires (MAIBA). La presente tesina está enfocada principalmente en el diseño, desarrollo e implementación de la aplicación móvil, una de las cuales integra dicho Sistema.",
+    "title": "Implementación del Sistema de Gestión del Documento Único Equino del Ministerio de Agroindustria de la Provincia de Buenos Aires"
+  },
+  {
+    "authors": "Pettoruti, José Enrique; Rodriguez, Ismael Pablo",
+    "date": "2011",
+    "filter": "Algorithms",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/47013",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "El objetivo principal de esta Tesina ha sido desplegar un Cloud Privado con el propósito de analizar e investigar la arquitectura Cloud Computing para ambientes de cómputo científico, teniendo en cuenta el auge de esta arquitectura. Resulta de interés estudiar la evolución de las tecnologías de cómputo Cluster y Grid hacia Cloud. También interesa realizar el despliegue un Cloud Privado utilizando un gestor Open Source y llevar a cabo la ejecución de algunas aplicaciones paralelas de cómputo científico que utilizan pasaje de mensajes MPI. Como casos de prueba se han seleccionado las aplicaciones que resuelven el problema de las N-Reinas y los NAS Parallel Benchmarks. Cabe destacar que las aplicaciones antes mencionadas poseen diversas características con respecto al tiempo de procesamiento y de comunicación. Finalmente, analizar los tiempos de ejecución y calcular el overhead que introduce la arquitectura Cloud.",
+    "title": "Cloud computing en aplicaciones científicas"
+  },
+  {
+    "authors": "Poch, Karen; Rispoli, Paula",
+    "date": "2015",
+    "filter": "Algorithms",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/50093",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "Esta tesina ofrece un caso de estudio de un proceso de construcción de metamodelos, haciendo uso de una técnica iterativa e incremental y aplicando el lenguaje formal OCL. A partir de un análisis detallado sobre los espacios indoor, se diseñó el metamodelo abstracto \"Espacio Indoor\" que atravesó diferentes etapas en las que se muestra cómo el metamodelo puede ir mejorándose progresivamente a través de la aplicación de patrones de diseño y otras buenas prácticas de modelado, hasta obtener el metamodelo final. Siguiendo con un estudio semejante se definió el metamodelo concreto \"Facultad” que hereda el comportamiento de \"Espacio Indoor\" y agrega los conceptos propios de las facultades. Para plasmar dicho metamodelo, se analizó la plataforma ADOxx con la que se desarrolló la herramienta denominada “Modelador de facultades” que permite modelar cualquier facultad que se desee. Como complemento se presenta un prototipo en el que, a partir de la importación de un archivo XML generado con la herramienta desarrollada, permite realizar ciertas consultas para mostrar que es posible el recorrido del espacio. Finalmente, con el objetivo de demostrar la validez del metamodelo \"Facultad”, se detalla la instanciación de una sección de la Facultad de Informática.",
+    "title": "Representación de espacios indoor utilizando la herramienta de desarrollo de metamodelos ADOxx"
+  },
+  {
+    "authors": "Gómez, Sergio Alejandro",
+    "date": "2001",
+    "filter": "Algorithms",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/3879",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "Esta disertación introduce un paradigma de clasificación de textos en formato HTML basado en la aplicación del modelo de redes neuronales llamado Teoría de la Resonancia Adaptativa Difusa. También, se describe la implementación concreta de un agente de filtrado de páginas HTML llamado Querando!, el cual aprende el perfil de gustos de información de un usuario dado.\nSe realizaron diversas mediciones para determinar la representación más adecuada de los documentos HTML a procesar así como la de la topología final de la red neuronal a utilizar. Aquí, se enumeran, describen, analizan y comparan estas mediciones.\nAdemás, para tener un sentido de completitud de los temas estudiados se analizan la literatura científica en los temas concernientes a este trabajo, los cuales se comparan con lo realizado. Dichos temas son: el área de recuperación y filtrado de la información, algoritmos de clasificación y clustering, los modelos de redes neuronales y el área de los agentes inteligentes que es donde se aplican todos estos conceptos.\nTambién, se analiza lo concerniente a los detalles más relevantes de la implementación del agente Querando haciendo comparaciones con otras implementaciones posibles.",
+    "title": "Un agente para clasificación y filtrado de páginas web"
+  },
+  {
+    "authors": "Canal, Esteban de la",
+    "date": "2003",
+    "filter": "Algorithms",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/3898",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "En primer término se presenta un algoritmo de Arity Raising que presenta la característica de manipular, tanto en el código origen como en el destino, código polimórfico. En segundo lugar, el algoritmo presentado hace uso completo del concepto de alto orden. Además, en esta presentación no hay ningún tipo de restricción para las anotaciones (estáticas o dinámicas) de entrada, pudiendo estar estas independientemente en cualquier tupla del código; vale aclarar esto pues en otros trabajos las anotaciones deben seguir reglas particulares como por ejemplo no poder anotar una tupla como dinámica si se encuentra dentro de una tupla estática.\nFinalmente se provee una demostración de que el sistema propuesto es correcto.\nLa corrección demostrada está basada en una noción de simulación para lo cual fue necesario dar semántica a los lenguajes utilizados.",
+    "title": "Obteniendo eficiencia y legibilidad en programas generados automáticamente"
+  },
+  {
+    "authors": "Baragatti, Hernán; Bianchi, José",
+    "date": "1999",
+    "filter": "Algorithms",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/3843",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "El advenimiento de la computación paralela junto con las innovaciones tecnológicas producidas en este campo, han beneficiado la manera de atacar este tipo de problemas. Así, tenemos métodos de optimización paralelos, que introducen ideas y técnicas de la computación paralela en la teoría y en los algoritmos numéricos de optimización.\nA menudo la implementación de un algoritmo cambia la perspectiva que uno tiene del mismo. Es con los experimentos computacionales de testeo cuando uno puede tener realmente confianza en la eficiencia y robustez de un algoritmo de optimización matemático de gran envergadura.\nUna de las cosas que más nos motivó a emprender el desafío de este Trabajo de Grado es la posibilidad de que el mismo realice un aporte para poder resolver en forma más eficiente cada uno de los importantes problemas que se encuentran subyacentes en el modelo matemático a optimizar: reconstrucción de imágenes por proyecciones, aplicaciones médicas como el planeamiento de la terapia de radiación, programación no lineal para el planeamiento bajo incertidumbre, balanceo de matrices, optimización de redes, planeamiento financiero, etc.",
+    "title": "Desarrollo de una implementación óptima de un algoritmo acelerado de proyección de bloques"
+  },
+  {
+    "authors": "De Giusti, Laura Cristina; Tarrío, Diego F.",
+    "date": "2000",
+    "filter": "Algorithms",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/3855",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "Tradicionalmente, el problema de consultas por contenido, es decir, el problema de recuperación de imágenes que resulten similares a una imagen dada de una base de imágenes fue solucionado utilizando una firma digital para cada imagen que extraiga las características de interés para comparar. Posteriormente, utilizando una función de distancia (como métrica de diferenciación) adecuada, se puede determinar si dos imágenes poseen firmas digitales similares[Jac95]. Los métodos típicos para computar las firmas digitales fallan cuando consideran un subconjunto reducido de características de una imagen, retomando como similares imágenes que tienen ciertas características parecidas pero que no lo son considerando otras características importantes.",
+    "title": "Algoritmo de análisis de similitud de imágenes"
+  },
+  {
+    "authors": "Aybar Rosales, Vanessa del Carmen",
+    "date": "2012",
+    "filter": "Algorithms",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/47050",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "RITA es una aplicación destinada a cualquier usuario que quiera dar sus primeros pasos en programación.\nEl objetivo de RITA es lograr que cualquier persona interesada en aprender a programar pueda centrar la atención en la lógica de programación, evitando la frustración que pudiera surgir al enfrentarse a los problemas de errores sintaxis de un lenguaje de programación particular, y en su lugar motivándolo a continuar indagando y probando sobre la herramienta. En forma simultánea, el usuario final se va familiarizando con conceptos básicos de programación, programación orientada a objetos y el lenguaje Java.\nEl mecanismo empleado en RITA para la creación de algoritmos es la técnica de programación en bloques. La temática de los algoritmos consiste en la programación de robots capaces de combatir en un campo de batalla. El ganador de la batalla será el robot que implementó la mejor estrategia de combate.\nRITA genera código fuente JAVA a medida que el usuario de la aplicación compone la estrategia conectando bloques, y de manera transparente brinda la posibilidad de compilar a bytecode y disparar la ejecución contra otros robots.\nRITA es una aplicación de código abierto, escrita en Java y construida integrando OpenBlocks y Robocode.",
+    "title": "Aplicaciones complementarias a Robocode que faciliten el aprendizaje de programación en escuelas secundarias"
+  },
+  {
+    "authors": "Olivera, Javier Hugo",
+    "date": "2006",
+    "filter": "Algorithms",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/3940",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "Las Redes Neuronales han demostrado ser una excelente herramienta para la resolución de tareas complejas, entendiendo como tales aquellas cuya solución no es directa sino que involucra el aprendizaje de una estrategia para lograr el objetivo esperado. Tal es el caso de un robot que debe trasladar distintos tipos de elementos dentro de un escenario con obstáculos.\nTambién es importante considerar que existen situaciones que no pueden ser resueltas por un único agente. Tal es el caso del fútbol robótico donde varios jugadores combinan sus acciones para lograr un único objetivo. Este tipo de problemas pertenece a lo que se conoce como sistemas multi agente. Los sistemas multi agentes (MAS – Multi Agent System) pertenecen a una rama de la inteligencia artificial (AI – Artificial Intelligence) que apunta a proveer principios para la construcción de sistemas complejos involucrando múltiples agentes y mecanismos para coordinar comportamientos independientes de los mismos. Es importante notar que, más allá de las diferencias entre los agentes, es el grupo el que debe llevar a cabo la estrategia.\nDiversas investigaciones han demostrado que este tipo de situaciones pueden ser resueltas dividiendo el problema original en partes más simples, llamadas subtareas, permitiendo de esta forma un aprendizaje gradual de la respuesta buscada.\nCuando la situación a resolver es compleja, es difícil establecer a priori el controlador a utilizar y es aquí donde la descomposición del problema toma importancia. Este proceso, que comienza por aprender las tareas más simples y a partir de ellas va incorporando habilidades más complejas, se conoce como aprendizaje por capas.\nPor otro lado, a menos que se disponga de la información inicial necesaria para resolver cada subtarea, resulta ideal disponer de algún mecanismo que permita realizar la adaptación de la manera más automática posible. En esta dirección se han desarrollado distintas soluciones que combinan técnicas de Evolución Incremental con Redes Neuronales Evolutivas con el objeto de proveer un mecanismo adaptivo que minimice el conocimiento previo necesario para obtener un buen desempeño dando lugar a controladores formados por varias redes. Otro aspecto a tener en cuenta es la forma de determinar cual es la red neuronal que debe desenvolverse en cada instante de tiempo; en esta línea existen diferentes alternativas que van desde el uso de un árbol de decisión diseñado ad-hoc hasta mecanismos que organizan la estructura en forma automática.",
+    "title": "Evolución de controladores definidos por redes neuronales"
+  },
+  {
+    "authors": "La Battaglia, Juan Pablo",
+    "date": "2009",
+    "filter": "Algorithms",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/3996",
+    "origin": "Licenciado en Informática; Universidad Nacional de La Plata",
+    "resume": "La resolución de problemas de optimización es de gran interés en la actualidad y ha motivado el desarrollo de diversos métodos informáticos para tratar de resolverlos.\nExisten varios problemas pertenecientes a la Ingeniería de Software que pueden ser resueltos utilizando este enfoque. En esta tesis se presenta una nueva alternativa basada en la combinación de una metaheurística poblacional (PSO) con una lista Tabú para resolver el problema de la generación de casos de prueba en el testeo de software. Este problema es una tarea de suma importancia en el desarrollo de software que requiere un alto costo computacional y generalmente es difícil de resolver.\nEl desempeño de la solución propuesta ha sido probado sobre un conjunto de programas de distinta complejidad. Los resultados obtenidos muestran que el método propuesto permite obtener un conjunto de datos de prueba reducido, en un tiempo adecuado y con una cobertura superior a los métodos convencionales.",
+    "title": "Generación dinámica de casos de prueba utilizando metaheurísticas"
+  },
+  {
+    "authors": "Falcone, Facundo; Ronconi, Lisandro",
+    "date": "2017",
+    "filter": "Algorithms",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/59663",
+    "origin": "Licenciado en Sistemas; Universidad Nacional de La Plata",
+    "resume": "En este trabajo, se presenta una extensión para Eclipse que genera automáticamente visualizaciones de estructuras de datos y algoritmos a partir de código JAVA implementado por los estudiantes y no intervenido. Esta propuesta ayuda a reducir la abstracción que conlleva el estudio de estos temas sin el esfuerzo extra que implica aprender una nueva herramienta, lenguaje o librerías especiales para la visualización de algoritmos.",
+    "title": "ALGOLIPSE: un visualizador de algoritmos y estructuras de datos para Eclipse"
   }
 ]

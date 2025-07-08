@@ -140,23 +140,23 @@ function loadTesinas() {
     .then((tesinas) => {
       tesinas.forEach((tesina) => {
         const banner = tesina.bannerUrl?.trim() || DEFAULT_BANNER;
-        const categoria = tesina.categoria?.trim() || "Other";
+        const filter = tesina.filter?.trim() || "Other";
 
         const col = document.createElement("div");
         col.className = "tesina-item";
-        col.setAttribute("data-category", categoria);
+        col.setAttribute("data-category", filter);
 
         col.innerHTML = `
   <a href="detail_tesina.html?nombre=${encodeURIComponent(
-    tesina.nombre
+    tesina.title
   )}" class="text-decoration-none">
     <div class="card card-theme border-0 h-100 shadow-sm">
       <img src="${banner}" class="card-img-top" alt="Banner ilustrativo para la tesina ${
-          tesina.nombre
-        } realizada por ${tesina.autor}">
+          tesina.title
+        } realizada por ${tesina.authors}">
       <div class="card-body">
-        <h3 class="card-title">${tesina.nombre}</h3>
-        <p class="card-text">${tesina.autor || ""}</p>
+        <h3 class="card-title">${tesina.title}</h3>
+        <p class="card-text">${tesina.authors || ""}</p>
       </div>
     </div>
   </a>

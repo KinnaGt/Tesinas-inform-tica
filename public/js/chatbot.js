@@ -23,21 +23,21 @@ function initChatbot() {
 
     if (match) {
       answerOutput.textContent = `La tesina "${
-        match.nombre
-      }" fue realizada por ${match.autor || "autor desconocido"}. ${
+        match.title
+      }" fue realizada por ${match.authors || "autor desconocido"}. ${
         match.descripcion || "Sin descripción disponible."
       }`;
       return;
     }
 
-    const categoria = tesinas.find(
-      (t) => t.categoria && input.includes(t.categoria.toLowerCase())
+    const filter = tesinas.find(
+      (t) => t.filter && input.includes(t.filter.toLowerCase())
     );
 
-    if (categoria) {
-      answerOutput.textContent = `Hay una tesina sobre ${
-        categoria.categoria
-      }: "${categoria.nombre}" por ${categoria.autor || "autor desconocido"}.`;
+    if (filter) {
+      answerOutput.textContent = `Hay una tesina sobre ${filter.filter}: "${
+        filter.title
+      }" por ${filter.authors || "autor desconocido"}.`;
       return;
     }
 

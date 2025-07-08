@@ -34,6 +34,13 @@ body {
   color: var(--text-color);
 }
 
+.title-s {
+  color: var(--text-color);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  line-height: 1.4;
+  text-align: center;
+}
+
 .subtitle-s {
   color: var(--text-color);
   font-size: clamp(1rem, 2vw, 1.25rem);
@@ -102,7 +109,7 @@ button {
   border-color: var(--text-accent);
 }
 .card-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
   line-height: 1.3;
 
