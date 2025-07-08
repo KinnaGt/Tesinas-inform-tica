@@ -16,5 +16,10 @@
     "dev": "live-server public",
     "preview": "serve public"
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "puppeteer": "^24.12.0"
+  }
 }
