@@ -1,12 +1,12 @@
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 
+// Filtros que vamos a buscar en la pagina
 const filtros = [
   "Accesibilidad",
   "Web-based+services",
   "Android",
   "Algorithms",
-  "Software",
 ];
 
 (async () => {

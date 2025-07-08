@@ -41,15 +41,14 @@
                 </div>
 
                 <div class="col-md-6 text-center">
-                    <img id="tesina-banner" src="img/default_banner.png" class="rounded-circle shadow-lg"
-                        alt="Imagen del autor" style="width: 200px; height: 200px; object-fit: cover;" />
+                    <img id="tesina-banner" src="img/default_banner.png"
+                        class="tesina-banner-img rounded-circle shadow-lg" alt="Imagen del autor" />
                 </div>
             </div>
         </section>
     </main>
 
 
-    <script src="js/include.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -67,12 +66,21 @@
                     document.getElementById("tesina-title").textContent = tesina.title;
                     document.getElementById("tesina-author").textContent = tesina.authors || "Autor desconocido";
                     document.getElementById("tesina-desc").textContent = tesina.resume || "Sin descripción.";
-                    document.getElementById("tesina-banner").src = tesina.bannerUrl || "img/default_banner.png";
                     document.getElementById("tesina-link").href = tesina.link || "#";
 
+                    const BANNERS = {
+                        UX: "img/ux.svg",
+                        Web: "img/web.svg",
+                        Android: "img/android.svg",
+                        Algorithms: "img/algorithms.svg",
+                    };
+
+                    const banner = BANNERS[tesina.filter?.trim()] || "img/default_banner.png";
+                    document.getElementById("tesina-banner").src = banner;
                 });
         });
     </script>
+
 </body>
 
 </html>

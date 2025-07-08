@@ -133,37 +133,44 @@ function loadTesinas() {
   const container = document.getElementById("tesinas-carousel");
   if (!container) return;
 
-  const DEFAULT_BANNER = "img/default_banner.png";
+  const banners = {
+    UX: "img/ux.svg",
+    Web: "img/web.svg",
+    Android: "img/android.svg",
+    Algorithms: "img/algorithms.svg",
+  };
 
   fetch("data/tesinas.json")
     .then((res) => res.json())
     .then((tesinas) => {
       tesinas.forEach((tesina) => {
-        const banner = tesina.bannerUrl?.trim() || DEFAULT_BANNER;
+        // Usar el filtro para definir el banner, si no existe usar default
         const filter = tesina.filter?.trim() || "Other";
+        const banner = banners[filter];
 
         const col = document.createElement("div");
         col.className = "tesina-item";
         col.setAttribute("data-category", filter);
 
         col.innerHTML = `
-  <a href="detail_tesina.html?nombre=${encodeURIComponent(
-    tesina.title
-  )}" class="text-decoration-none">
-    <div class="card card-theme border-0 h-100 shadow-sm">
-      <img src="${banner}" class="card-img-top" alt="Banner ilustrativo para la tesina ${
+          <a href="detail_tesina.html?nombre=${encodeURIComponent(
+            tesina.title
+          )}" class="text-decoration-none">
+            <div class="card card-theme border-0 h-100 shadow-sm">
+              <img src="${banner}" class="card-img-top" alt="Banner ilustrativo para la tesina ${
           tesina.title
         } realizada por ${tesina.authors}">
-      <div class="card-body">
-        <h3 class="card-title">${tesina.title}</h3>
-        <p class="card-text">${tesina.authors || ""}</p>
-      </div>
-    </div>
-  </a>
-`;
+              <div class="card-body">
+                <h3 class="card-title">${tesina.title}</h3>
+                <p class="card-text">${tesina.authors || ""}</p>
+              </div>
+            </div>
+          </a>
+        `;
         container.appendChild(col);
       });
 
+      // Resto igual: filtros, dragscroll, etc
       document.querySelectorAll(".btn-filter").forEach((btn) =>
         btn.addEventListener("click", () => {
           document
@@ -181,16 +188,12 @@ function loadTesinas() {
             if (match) visibleCount++;
           });
 
-          const container = document.getElementById("tesinas-carousel");
           let msg = document.getElementById("no-tesinas-msg");
-
           if (!msg) {
             msg = document.createElement("div");
             msg.id = "no-tesinas-msg";
-            msg.className = "";
             container.appendChild(msg);
           }
-
           msg.textContent =
             visibleCount === 0 ? "No hay tesinas para este filtro." : "";
         })

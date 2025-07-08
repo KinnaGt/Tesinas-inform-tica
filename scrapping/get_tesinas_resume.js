@@ -14,7 +14,7 @@ const jsonData = require("../public/data/tesinas.json");
     try {
       await page.goto(item.link, { waitUntil: "domcontentloaded" });
 
-      // Esperar a que haya algún bloque de descripción
+      // Time out preventivo
       await page.waitForSelector(".simple-item-view-description", {
         timeout: 5000,
       });
