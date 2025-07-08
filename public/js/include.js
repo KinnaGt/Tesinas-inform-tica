@@ -46,6 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.getElementById("askButton")) {
       initChatbot(); // Función que tenés que mover a una función aparte
     }
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    updateThemeImages(savedTheme); // ← aquí ya está todo el HTML cargado
   });
 });
 
@@ -118,7 +120,6 @@ function setupAccessibilityMenu() {
   });
   const savedTheme = localStorage.getItem("theme") || "dark";
   document.documentElement.classList.add(`theme-${savedTheme}`);
-  updateThemeImages(savedTheme);
 
   // Marcar el wrapper activo
   document

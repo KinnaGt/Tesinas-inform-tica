@@ -5,5 +5,19 @@
     "descripcion": "Omnially es una app web para crear lienzos dinámicos y proyectarlos en dispositivos físicos. Se rediseñó su front-end para mejorar la interfaz y la experiencia del usuario, reorganizando funciones clave y centralizando integraciones. Se aplicaron estudios de usabilidad y diseño centrado en el usuario para validar mejoras, implementando vistas más intuitivas y planificando futuras actualizaciones.",
     "link": "https://sedici.unlp.edu.ar/handle/10915/176310",
     "nombre": "Reingeniería de la Interfaz de usuario de Omnially"
+  },
+  {
+    "autor": "Jacinto y Moschettoni",
+    "categoria": "IA",
+    "descripcion": "Las redes neuronales son efectivas en tareas complejas, pero su falta de interpretabilidad es una desventaja. Para abordarlo, se estudió la extracción de reglas como forma de explicar su funcionamiento. En esta tesina se desarrolló FORxREN, un algoritmo que genera reglas claras y fieles al modelo, facilitando la comprensión de sus decisiones.",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/164808",
+    "nombre": "Técnicas de extracción de reglas en redes neuronales artificiales"
+  },
+  {
+    "autor": "Federico Pacheco",
+    "categoria": "UX",
+    "descripcion": "La tesina investiga la accesibilidad en videojuegos independientes, con foco en discapacidades auditivas. Incluye el desarrollo del plugin “Godot Subtitles” para Godot Engine, su publicación en GitHub y la creación de un catálogo de buenas prácticas. Analiza la evolución histórica de la accesibilidad, su impacto en los videojuegos y las perspectivas tanto del jugador como del desarrollador, incluyendo casos de estudio para identificar limitaciones comunes.",
+    "link": "https://sedici.unlp.edu.ar/handle/10915/164808",
+    "nombre": "Accesibilidad en videojuegos"
   }
 ]
