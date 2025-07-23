@@ -33,6 +33,17 @@ body {
   width: 1.5em; /* 1.5 veces el tamaño de la letra */
   height: 1.5em;
 }
+#acc-settings-btn:hover img,
+#acc-settings-btn:focus img {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+#acc-settings-btn:focus {
+  outline: 2px solid var(--text-accent);
+  outline-offset: 4px;
+}
 
 .accessibility-text {
   font-size: var(--font-size-base);
