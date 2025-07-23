@@ -98,7 +98,14 @@ button {
   font-size: clamp(0.8rem, 1.5vw, 1.2rem);
   width: 100%;
   margin-bottom: 4px;
+  transition: transform 0.2s ease;
 }
+
+.font-btn:hover,
+.font-btn:focus {
+  transform: scale(1.05);
+}
+
 .active-btn {
   font-size: clamp(0.8rem, 1.5vw, 1.2rem);
   background-color: var(--text-accent);
@@ -281,6 +288,12 @@ button {
   cursor: pointer;
   position: relative;
   z-index: 1;
+  transition: transform 0.2s ease;
+}
+
+.theme-icon:hover,
+.theme-icon:focus {
+  transform: scale(1.1);
 }
 
 .theme-icon .icon-img {
@@ -392,10 +405,15 @@ button {
   align-self: flex-start;
   font-size: 0.9rem;
 }
+.btn-red {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
 
-.btn-red:hover {
+.btn-red:hover,
+.btn-red:focus {
   background-color: var(--btn-red-hover, #f3a6ad);
   color: var(--btn-text-on-accent);
+  transform: scale(1.05);
 }
 
 .ask-section > * {
