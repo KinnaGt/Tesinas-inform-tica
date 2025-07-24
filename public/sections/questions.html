@@ -1,6 +1,6 @@
 <section class="vh-100 d-flex align-items-center text-light">
     <div class="container">
-        <h2 class="title-lg theme-text" aria-label="Preguntas sobre las tesinas">
+        <h2 class="title-lg theme-text" aria-label="Chatbot de Tesinas">
             <strong class="text-accent">Preguntas</strong>
             <strong>sobre las tesinas</strong>
         </h2>
@@ -11,20 +11,15 @@
             </div>
 
             <div class="col-md-6">
-                <div class="ask-section d-flex flex-column">
-                    <div class="d-flex flex-column gap-2">
-                        <label for="questionInput" class="text-theme">Pregunta</label>
-                        <input type="text" id="questionInput" class="theme-input" placeholder="Escribe tu pregunta..."
-                            autocomplete="off" />
-                    </div>
+                <!-- Ajustado para centrar el botón y el chatbot -->
+                <!-- Aseguramos que ask-section sea flex y centre sus ítems -->
+                <div class="ask-section d-flex flex-column justify-content-center align-items-center">
+                    <!-- Botón para iniciar el chatbot, ahora con clase personalizada para tamaño y centrado -->
+                    <button id="startChatbotBtn" class="btn-red start-chatbot-btn-custom mb-4">Iniciar Chatbot</button>
 
-                    <button id="askButton" class="btn btn-red" type="button">
-                        Preguntar
-                    </button>
-
-                    <div class="d-flex flex-column gap-2 mt-3">
-                        <p id="respuestaLabel" class="text-theme mt-4">Respuesta:</p>
-                        <div id="answerOutput" class="answer-output"></div>
+                    <!-- Contenedor para BotUI, oculto inicialmente -->
+                    <div id="botui-app" class="botui-container d-none">
+                        <bot-ui></bot-ui>
                     </div>
                 </div>
             </div>

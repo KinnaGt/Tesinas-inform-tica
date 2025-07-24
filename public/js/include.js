@@ -1,5 +1,16 @@
+// js/include.js
 document.addEventListener("DOMContentLoaded", function () {
   const includes = document.querySelectorAll("[data-include-html]");
+
+  // Si no hay elementos a incluir, simplemente ejecuta las funciones finales.
+  // El chatbot ahora se inicializa a sí mismo en chatbot.js
+  if (includes.length === 0) {
+    loadTesinas();
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    updateThemeImages(savedTheme);
+    window.scrollTo(0, 0); // Forzar scroll al inicio si no hay includes
+    return;
+  }
 
   const promises = Array.from(includes).map(async (el) => {
     const file = el.getAttribute("data-include-html");
@@ -12,11 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (file.includes("top_bar.html")) {
           setupAccessibilityMenu();
         }
-
-        // Inicia chatbot si corresponde
-        if (file.includes("questions.html")) {
-          if (typeof initChatbot === "function") initChatbot();
-        }
       } else {
         el.innerHTML = "No se pudo cargar " + file;
       }
@@ -25,9 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Espera a que todas las promesas de carga de HTML se resuelvan
   Promise.all(promises).then(() => {
-    loadTesinas();
+    // Una vez que todo el HTML dinámico ha sido cargado en el DOM:
+    loadTesinas(); // Carga las tesinas
 
+    // Lógica de filtros de tesinas (se mantiene igual)
     document.querySelectorAll(".btn-filter").forEach((btn) =>
       btn.addEventListener("click", () => {
         document
@@ -42,15 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       })
     );
-    // Ahora sí: cargar chatbot si los elementos están en el DOM
-    if (document.getElementById("askButton")) {
-      initChatbot(); // Función que tenés que mover a una función aparte
-    }
+
+    // Lógica de actualización de imágenes de tema (se mantiene igual)
     const savedTheme = localStorage.getItem("theme") || "dark";
-    updateThemeImages(savedTheme); // ← aquí ya está todo el HTML cargado
+    updateThemeImages(savedTheme);
+
+    window.scrollTo(0, 0);
   });
 });
 
+// Las funciones auxiliares permanecen igual
 function setupAccessibilityMenu() {
   const settingsBtn = document.getElementById("acc-settings-btn");
   const menu = document.getElementById("acc-menu");
@@ -153,20 +163,20 @@ function loadTesinas() {
         col.setAttribute("data-category", filter);
 
         col.innerHTML = `
-          <a href="detail_tesina.html?nombre=${encodeURIComponent(
-            tesina.title
-          )}" class="text-decoration-none">
-            <div class="card card-theme border-0 h-100 shadow-sm">
-              <img src="${banner}" class="card-img-top" alt="Imagen ilustrativa de la categoria ${
+                    <a href="detail_tesina.html?nombre=${encodeURIComponent(
+                      tesina.title
+                    )}" class="text-decoration-none">
+                        <div class="card card-theme border-0 h-100 shadow-sm">
+                            <img src="${banner}" class="card-img-top" alt="Imagen ilustrativa de la categoria ${
           tesina.filter
         } realizada por ${tesina.authors}">
-              <div class="card-body">
-                <h3 class="card-title">${tesina.title}</h3>
-                <p class="card-text">${tesina.authors || ""}</p>
-              </div>
-            </div>
-          </a>
-        `;
+                            <div class="card-body">
+                                <h3 class="card-title">${tesina.title}</h3>
+                                <p class="card-text">${tesina.authors || ""}</p>
+                            </div>
+                        </div>
+                    </a>
+                `;
         container.appendChild(col);
       });
 

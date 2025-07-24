@@ -1,47 +1,232 @@
-function initChatbot() {
-  let tesinas = [];
+// js/chatbot.js
 
-  fetch("data/tesinas.json")
-    .then((res) => res.json())
-    .then((data) => (tesinas = data));
+// Espera a que el DOM esté completamente cargado antes de intentar inicializar BotUI
+// Y añade un pequeño retraso para asegurar que BotUI esté disponible
+document.addEventListener("DOMContentLoaded", () => {
+  // Un pequeño retraso para dar tiempo a que todos los scripts externos se carguen
+  setTimeout(async () => {
+    // Primero, verifica si BotUI está definido globalmente
+    if (typeof BotUI === "undefined") {
+      console.error(
+        "Error: BotUI no está definido. Asegúrate de que botui.min.js se ha cargado correctamente en tu HTML ANTES de chatbot.js."
+      );
+      return; // Detener la ejecución si BotUI no está disponible
+    }
 
-  const askButton = document.getElementById("askButton");
-  const questionInput = document.getElementById("questionInput");
-  const answerOutput = document.getElementById("answerOutput");
+    const botuiAppElement = document.getElementById("botui-app");
+    const startChatbotBtn = document.getElementById("startChatbotBtn");
 
-  if (!askButton || !questionInput || !answerOutput) return;
-
-  askButton.addEventListener("click", () => {
-    const input = questionInput.value.trim().toLowerCase();
-
-    if (!input) {
-      answerOutput.textContent = "Por favor escribí una pregunta.";
+    if (!botuiAppElement || !startChatbotBtn) {
+      console.error(
+        "Error: Elementos del chatbot (botui-app o startChatbotBtn) no encontrados en el DOM."
+      );
       return;
     }
 
-    const match = tesinas.find((t) => t.nombre?.toLowerCase().includes(input));
+    let botui; // Declarar botui fuera para que sea accesible globalmente en este ámbito
+    let chatHistory = []; // Para mantener el historial del chat para el LLM
+    let tesinasData = []; // Para almacenar los datos de tesinas.json
 
-    if (match) {
-      answerOutput.textContent = `La tesina "${
-        match.title
-      }" fue realizada por ${match.authors || "autor desconocido"}. ${
-        match.descripcion || "Sin descripción disponible."
-      }`;
-      return;
+    // Nueva función para cargar el JSON de tesinas
+    async function loadTesinasData() {
+      try {
+        const response = await fetch("data/tesinas.json");
+        if (!response.ok) {
+          const errorText = await response.text();
+          throw new Error(
+            `HTTP error! status: ${response.status}, text: ${errorText}`
+          );
+        }
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error("Error al cargar los datos de tesinas:", error);
+        // No podemos usar botui.message.bot aquí porque botui aún no está inicializado
+        // Esto se maneja en initializeAndStartChatbot() si la carga falla antes de la inicialización de botui
+        return [];
+      }
     }
 
-    const filter = tesinas.find(
-      (t) => t.filter && input.includes(t.filter.toLowerCase())
-    );
-
-    if (filter) {
-      answerOutput.textContent = `Hay una tesina sobre ${filter.filter}: "${
-        filter.title
-      }" por ${filter.authors || "autor desconocido"}.`;
-      return;
+    // Función para cargar el JSON de preguntas y respuestas frecuentes
+    async function loadKnowledgeBase() {
+      try {
+        const response = await fetch("data/frequent_questions.json");
+        if (!response.ok) {
+          const errorText = await response.text(); // Intenta leer el texto del error
+          throw new Error(
+            `HTTP error! status: ${response.status}, text: ${errorText}`
+          );
+        }
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error("Error al cargar la base de conocimiento:", error);
+        // No podemos usar botui.message.bot aquí porque botui aún no está inicializado
+        return []; // Retorna un array vacío en caso de error
+      }
     }
 
-    answerOutput.textContent =
-      "No encontré una respuesta relacionada. Probá reformular la pregunta.";
-  });
-}
+    // Función para buscar una respuesta en la base de conocimiento JSON
+    function findAnswerInKnowledgeBase(question, knowledgeBase) {
+      const lowerCaseQuestion = question.toLowerCase();
+      for (const entry of knowledgeBase) {
+        const keywords = entry.keywords.map((kw) => kw.toLowerCase());
+        for (const keyword of keywords) {
+          if (lowerCaseQuestion.includes(keyword)) {
+            return entry.answer;
+          }
+        }
+      }
+      return null; // No se encontró una respuesta directa
+    }
+
+    // Función para llamar al modelo de lenguaje (LLM)
+    async function callLLM(prompt, tesinasInfo) {
+      try {
+        const relevantTesinas = tesinasInfo.slice(0, 10).map((tesina) => ({
+          title: tesina.title,
+          authors: tesina.authors,
+          date: tesina.date,
+          filter: tesina.filter,
+          resume: tesina.resume,
+        }));
+
+        const tesinasContext =
+          relevantTesinas.length > 0
+            ? `Aquí tienes información sobre algunas tesinas disponibles: ${JSON.stringify(
+                relevantTesinas
+              )}`
+            : "No hay información de tesinas disponible para consultar.";
+
+        chatHistory.push({
+          role: "user",
+          parts: [
+            { text: `${prompt}\n\nContexto de tesinas: ${tesinasContext}` },
+          ],
+        });
+
+        const payload = {
+          contents: chatHistory,
+          generationConfig: {
+            maxOutputTokens: 150,
+          },
+        };
+
+        const apiKey = window.GEMINI_API_KEY_LOCAL || "";
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+        const response = await fetch(apiUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          console.error(
+            "Error al llamar al LLM (response.ok es false):",
+            errorData
+          );
+          throw new Error(
+            `LLM API error! status: ${
+              response.status
+            }, message: ${JSON.stringify(errorData)}`
+          );
+        }
+
+        const result = await response.json();
+
+        if (
+          result.candidates &&
+          result.candidates.length > 0 &&
+          result.candidates[0].content &&
+          result.candidates[0].content.parts &&
+          result.candidates[0].content.parts.length > 0
+        ) {
+          const text = result.candidates[0].content.parts[0].text;
+          chatHistory.push({ role: "model", parts: [{ text: text }] });
+          return text;
+        } else {
+          console.warn("Estructura de respuesta inesperada del LLM:", result);
+          return "Lo siento, no pude generar una respuesta en este momento. Por favor, intenta de nuevo más tarde.";
+        }
+      } catch (error) {
+        console.error("Error en la función callLLM (catch block):", error);
+        return "Lo siento, hubo un problema al conectar con el servicio de inteligencia artificial. Por favor, intenta de nuevo.";
+      }
+    }
+
+    // Función para manejar el bucle de entrada de texto principal
+    async function handleTextInputLoop(knowledgeBase, tesinasData) {
+      while (true) {
+        const input = await botui.action.text({
+          action: {
+            placeholder: "Escribe tu pregunta aquí...",
+          },
+          autofocus: false, // Evita el autofocus en el campo de texto
+          force_scroll: false, // Evita que BotUI fuerce el scroll a la acción
+        });
+
+        const userQuestion = input.value.trim();
+
+        if (userQuestion) {
+          let botResponse = findAnswerInKnowledgeBase(
+            userQuestion,
+            knowledgeBase
+          );
+
+          if (botResponse) {
+            await botui.message.bot({
+              content: botResponse,
+            });
+          } else {
+            await botui.message.bot({
+              content:
+                "Buscando una respuesta... (Esto puede tardar un momento)",
+            });
+            const llmPrompt = `El usuario pregunta: "${userQuestion}". Basado en la información de tesinas proporcionada y tu conocimiento general sobre tesinas de informática de la UNLP, por favor proporciona una respuesta concisa y útil. Si no tienes información específica, indica que no puedes responder directamente pero ofrece una sugerencia general.`;
+            const llmAnswer = await callLLM(llmPrompt, tesinasData);
+            await botui.message.bot({
+              content: llmAnswer,
+            });
+          }
+        } else {
+          await botui.message.bot({
+            content: "Por favor, escribe algo para que pueda ayudarte.",
+          });
+        }
+      }
+    }
+
+    // Función para inicializar y empezar la conversación del chatbot
+    async function initializeAndStartChatbot() {
+      // Inicializar BotUI aquí, después de que el botón es presionado
+      botui = new BotUI("botui-app");
+
+      const knowledgeBase = await loadKnowledgeBase();
+      tesinasData = await loadTesinasData();
+
+      await botui.message.bot({
+        content:
+          "¡Hola! Soy tu asistente de tesinas. ¿En qué puedo ayudarte hoy? Puedes preguntarme sobre qué es una tesina, cómo buscar, etc.",
+        scroll: false, // Evita el scroll automático para el mensaje inicial
+      });
+
+      // Iniciar el bucle de entrada de texto
+      handleTextInputLoop(knowledgeBase, tesinasData);
+    }
+
+    // Event listener para el botón "Iniciar Chatbot"
+    startChatbotBtn.addEventListener("click", () => {
+      startChatbotBtn.classList.add("d-none"); // Oculta el botón
+      botuiAppElement.classList.remove("d-none"); // Muestra el contenedor de BotUI
+      initializeAndStartChatbot(); // Inicia la lógica del chatbot
+    });
+
+    // Asegurarse de que la página esté en la parte superior al cargar,
+    // esto es una medida de seguridad general, no relacionada con BotUI directamente ahora.
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }, 200); // Aumentamos el retraso a 200ms para mayor seguridad
+});

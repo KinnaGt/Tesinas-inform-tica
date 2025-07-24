@@ -36,3 +36,5 @@ build/
 
 # Imágenes de pruebas o exportaciones temporales
 img/temp/
+
+public/js/config.js

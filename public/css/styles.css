@@ -2,20 +2,71 @@
   --bg-color: #121212;
   --text-color: #ffffff;
   --text-secondary: #bbbbbb;
-  --text-accent: #f4808a;
+  --text-accent: #f4808a; /* Color de acento principal (rojo/rosa) */
   --card-bg: #1e1e1e;
   --btn-text-on-accent: #0a0a0a;
   --btn-red-hover: #f3a6ad;
+
+  /* Variables específicas para BotUI y elementos que necesitan mapeo */
+  --botui-bg: var(--card-bg); /* Fondo del contenedor del chatbot */
+  /* Mensajes del bot: Usaremos un color fijo o una variable que defina un color distintivo para el bot */
+  --botui-message-bg-bot: #3f51b5; /* Azul para mensajes del bot, no cambia con el tema para mantener distinción */
+  --botui-message-text-bot: white; /* Color de texto para mensajes del bot */
+
+  /* Mensajes del usuario: Se adaptan al tema */
+  --botui-message-bg-user: var(
+    --text-accent
+  ); /* Fondo de mensajes del usuario, usando tu acento */
+  --botui-message-text-user: var(
+    --btn-text-on-accent
+  ); /* Color de texto para mensajes del usuario */
+
+  /* Input del chatbot */
+  --botui-input-bg: var(--bg-color); /* Fondo del input del chatbot */
+  --botui-input-border: var(--text-secondary); /* Borde del input del chatbot */
+  --botui-input-text: var(
+    --text-color
+  ); /* Color de texto del input del chatbot */
+
+  /* Botones del chatbot (enviar, acciones) */
+  --botui-button-bg: var(
+    --text-accent
+  ); /* Fondo del botón de enviar del chatbot */
+  --botui-button-text: var(
+    --btn-text-on-accent
+  ); /* Color de texto del botón de enviar */
+  --botui-button-hover: var(--btn-red-hover); /* Hover del botón de enviar */
+
+  /* Variable para el tamaño de fuente de los mensajes del chatbot */
+  --botui-message-font-size: 1rem; /* Tamaño base para los mensajes del chatbot */
 }
 
 html.theme-light {
   --bg-color: #f5f5f5;
   --text-color: #111111;
   --text-secondary: #424242;
-  --text-accent: #9e001d;
+  --text-accent: #9e001d; /* Color de acento principal (rojo oscuro) */
   --card-bg: #ffffff;
-  --btn-text-on-accent: #ffffff;
+  --btn-text-on-accent: #ffffff; /* Blanco para texto sobre acento en tema claro */
   --btn-red-hover: #700015fd;
+
+  /* Variables específicas para BotUI en tema claro */
+  --botui-bg: var(--card-bg);
+  --botui-message-bg-bot: #3f51b5; /* Se mantiene el azul fijo para el bot */
+  --botui-message-text-bot: white;
+
+  --botui-message-bg-user: var(--text-accent);
+  --botui-message-text-user: var(
+    --text-color
+  ); /* AHORA USA EL COLOR DE TEXTO GENERAL DEL TEMA CLARO */
+
+  --botui-input-bg: var(--bg-color);
+  --botui-input-border: var(--text-secondary);
+  --botui-input-text: var(--text-color);
+
+  --botui-button-bg: var(--text-accent);
+  --botui-button-text: var(--btn-text-on-accent);
+  --botui-button-hover: var(--btn-red-hover);
 }
 
 html.theme-light .theme-icon {
@@ -77,12 +128,15 @@ html {
 
 html.font-small {
   font-size: 12px;
+  --botui-message-font-size: 0.85rem; /* Tamaño más pequeño para los mensajes del chatbot */
 }
 html.font-medium {
   font-size: 16px;
+  --botui-message-font-size: 1rem; /* Tamaño medio para los mensajes del chatbot */
 }
 html.font-large {
   font-size: 20px;
+  --botui-message-font-size: 1.15rem; /* Tamaño más grande para los mensajes del chatbot */
 }
 
 .theme-text {
@@ -430,4 +484,147 @@ button {
   width: 90%;
   height: 90%;
   object-fit: contain;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Estilos para el Chatbot                                                    */
+/* -------------------------------------------------------------------------- */
+
+.botui-container {
+  background-color: var(--botui-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 500px; /* Altura fija, puedes ajustarla */
+  max-height: 70vh; /* Altura máxima relativa al viewport, ajusta según necesites */
+  width: 100%; /* Ocupa el ancho disponible */
+  overflow-y: auto; /* Permite desplazamiento si el contenido es demasiado largo */
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Transición para el cambio de tema */
+}
+
+/* Estilos para los mensajes del bot y del usuario */
+.botui-message-content {
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición para el cambio de tema */
+  font-family: "Poppins", sans-serif; /* Asegura la misma fuente */
+  font-size: var(
+    --botui-message-font-size
+  ); /* Usa la variable de tamaño de fuente */
+}
+
+/* Mensajes del bot */
+.botui-message-left .botui-message-content {
+  background-color: var(--botui-message-bg-bot);
+  color: var(
+    --botui-message-text-bot
+  ); /* Usa la variable para el color del texto del bot */
+  align-self: flex-start;
+}
+
+/* Mensajes del usuario */
+.botui-message-right .botui-message-content {
+  background-color: var(--botui-message-bg-user);
+  color: var(--botui-message-text-user);
+  align-self: flex-end;
+}
+
+/* Estilo para el input de texto del chatbot */
+.botui-actions-text-input {
+  border: 1px solid var(--botui-input-border);
+  background-color: var(--botui-input-bg);
+  color: var(--botui-input-text);
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box; /* Importante para que el padding no desborde el ancho */
+  font-family: "Poppins", sans-serif; /* Asegura la misma fuente */
+  font-size: 1rem; /* Asegura el mismo tamaño de fuente */
+  transition: border-color 0.3s ease, background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.botui-actions-text-input:focus {
+  border-color: var(
+    --text-accent
+  ); /* Resaltar con el color de acento al enfocar */
+  outline: none;
+  box-shadow: 0 0 6px var(--text-accent);
+}
+
+/* Estilo para el botón de enviar */
+.botui-actions-text-submit {
+  background-color: var(--botui-button-bg);
+  color: var(--botui-button-text);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+  font-family: "Poppins", sans-serif; /* Asegura la misma fuente */
+  font-size: 1rem; /* Asegura el mismo tamaño de fuente */
+}
+
+.botui-actions-text-submit:hover {
+  background-color: var(--botui-button-hover);
+  opacity: 1; /* Asegura que el hover sea visible */
+}
+
+/* Estilos para los botones de acción (ej. opciones de respuesta) */
+.botui-actions-buttons-button {
+  background-color: var(--botui-button-bg);
+  color: var(--botui-button-text);
+  border: 1px solid var(--botui-button-bg);
+  border-radius: 999px; /* Para botones redondeados */
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+}
+
+.botui-actions-buttons-button:hover,
+.botui-actions-buttons-button:focus {
+  background-color: var(--botui-button-hover);
+  color: var(--botui-button-text);
+  border-color: var(--botui-button-hover);
+}
+
+/* Estilo para el spinner de carga */
+.botui-message-loading {
+  color: var(--text-color); /* Color del spinner */
+}
+/* NUEVA CLASE PARA EL BOTÓN DE INICIAR CHATBOT */
+.start-chatbot-btn-custom {
+  padding: 15px 30px; /* Aumenta el padding para hacerlo más grande */
+  font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
+  font-weight: bold;
+  border-radius: 10px; /* Bordes más redondeados */
+  width: auto; /* Ancho automático basado en el contenido */
+  min-width: 250px; /* Ancho mínimo para que se vea grande */
+  text-align: center;
+  /* Centrado ya lo maneja el padre .ask-section con flexbox */
+}
+
+@media (max-width: 768px) {
+  .start-chatbot-btn-custom {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .start-chatbot-btn-custom {
+    padding: 10px 20px;
+    font-size: 1rem;
+    min-width: 180px;
+  }
 }
