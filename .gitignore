@@ -38,3 +38,4 @@ build/
 img/temp/
 
 public/js/config.js
+.vercel
