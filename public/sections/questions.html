@@ -1,18 +1,22 @@
 <section class="vh-100 d-flex align-items-center text-light">
     <div class="container">
-        <h2 class="title-lg theme-text" aria-label="Chatbot de Tesinas">
-            <strong class="text-accent">Preguntas</strong>
-            <strong>sobre las tesinas</strong>
-        </h2>
-        <div class="row align-items-center">
+        <div class="row align-items-center gy-4"> <!-- gy-4 añade espacio vertical entre filas -->
             <div class="col-md-6 mb-4 mb-md-0 text-center">
                 <img id="questionImg" src="img/questions_dark.png" alt="Ilustración de mujer preguntando"
                     class="img-fluid ask-img mx-auto d-block" />
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 d-flex flex-column gap-4"> <!-- gap-4 añade espacio entre elementos internos -->
+                <h2 class="title-lg theme-text" aria-label="Chatbot de Tesinas">
+                    <strong class="text-accent">Preguntas</strong>
+                    <strong>sobre las tesinas</strong>
+                </h2>
+                <h2 id="tesinaDesc" class="subtitle-md">
+                    Usá el chatbot para preguntar sobre autores, temas o detalles de las tesinas disponibles.
+                </h2>
                 <div class="d-flex justify-content-center">
-                    <button id="startChatbotBtn" class="btn-red start-chatbot-btn-custom m-8">
+                    <button id="startChatbotBtn" class="btn-red start-chatbot-btn-custom m-8"
+                        aria-label="Iniciar el chatbot para consultar sobre tesinas">
                         Iniciar Chatbot
                     </button>
                 </div>
@@ -21,9 +25,6 @@
                     <bot-ui></bot-ui>
                 </div>
             </div>
-
-
         </div>
-
     </div>
 </section>

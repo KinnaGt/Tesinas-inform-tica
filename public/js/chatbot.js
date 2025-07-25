@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const botuiAppElement = document.getElementById("botui-app");
     const startChatbotBtn = document.getElementById("startChatbotBtn");
-
+    const tesinaDesc = document.getElementById("tesinaDesc");
     if (!botuiAppElement || !startChatbotBtn) {
       console.error(
         "Error: Elementos del chatbot (botui-app o startChatbotBtn) no encontrados en el DOM."
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } catch (error) {
         console.error("Error en la función callLLM (catch block):", error);
-        return "Lo siento, hubo un problema al conectar con el servicio de inteligencia artificial. Por favor, intenta de nuevo.";
+        return "Lo siento, no estoy capacitado para responder a esa pregunta. Por favor, intenta con otra consulta o pregunta sobre tesinas.";
       }
     }
 
@@ -219,6 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Event listener para el botón "Iniciar Chatbot"
     startChatbotBtn.addEventListener("click", () => {
       startChatbotBtn.classList.add("d-none"); // Oculta el botón
+      tesinaDesc.classList.add("d-none"); // Oculta la descripción de tesina
       botuiAppElement.classList.remove("d-none"); // Muestra el contenedor de BotUI
       initializeAndStartChatbot(); // Inicia la lógica del chatbot
     });

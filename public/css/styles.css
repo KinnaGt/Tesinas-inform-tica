@@ -486,6 +486,32 @@ button {
   object-fit: contain;
 }
 
+.start-chatbot-btn-custom {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  width: auto;
+  min-width: 250px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .start-chatbot-btn-custom {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .start-chatbot-btn-custom {
+    padding: 10px 20px;
+    font-size: 1rem;
+    min-width: 180px;
+  }
+}
+
 /* -------------------------------------------------------------------------- */
 /* Estilos para el Chatbot                                                    */
 /* -------------------------------------------------------------------------- */
@@ -495,42 +521,23 @@ button {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 500px; /* Altura fija, puedes ajustarla */
-  max-height: 70vh; /* Altura máxima relativa al viewport, ajusta según necesites */
-  width: 100%; /* Ocupa el ancho disponible */
-  overflow-y: auto; /* Permite desplazamiento si el contenido es demasiado largo */
+  height: 500px;
+  max-height: 70vh;
+  width: 100%;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  transition: background-color 0.3s ease, border-color 0.3s ease; /* Transición para el cambio de tema */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Estilos para los mensajes del bot y del usuario */
 .botui-message-content {
   border-radius: 8px;
   padding: 10px 15px;
   margin-bottom: 10px;
   max-width: 80%;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transición para el cambio de tema */
-  font-family: "Poppins", sans-serif; /* Asegura la misma fuente */
-  font-size: var(
-    --botui-message-font-size
-  ); /* Usa la variable de tamaño de fuente */
-}
-
-/* Mensajes del bot */
-.botui-message-left .botui-message-content {
-  background-color: var(--botui-message-bg-bot);
-  color: var(
-    --botui-message-text-bot
-  ); /* Usa la variable para el color del texto del bot */
-  align-self: flex-start;
-}
-
-/* Mensajes del usuario */
-.botui-message-right .botui-message-content {
-  background-color: var(--botui-message-bg-user);
-  color: var(--botui-message-text-user);
-  align-self: flex-end;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-size: var(--botui-message-font-size);
 }
 
 /* Estilo para el input de texto del chatbot */
@@ -601,30 +608,14 @@ button {
 .botui-message-loading {
   color: var(--text-color); /* Color del spinner */
 }
-/* NUEVA CLASE PARA EL BOTÓN DE INICIAR CHATBOT */
-.start-chatbot-btn-custom {
-  padding: 15px 30px; /* Aumenta el padding para hacerlo más grande */
-  font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
-  font-weight: bold;
-  border-radius: 10px; /* Bordes más redondeados */
-  width: auto; /* Ancho automático basado en el contenido */
-  min-width: 250px; /* Ancho mínimo para que se vea grande */
-  text-align: center;
-  /* Centrado ya lo maneja el padre .ask-section con flexbox */
+/* Mensaje del BOT */
+.botui-message-left .botui-message-content {
+  background-color: var(--botui-message-bg-bot) !important;
+  color: var(--botui-message-text-bot) !important;
 }
 
-@media (max-width: 768px) {
-  .start-chatbot-btn-custom {
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    min-width: 200px;
-  }
-}
-
-@media (max-width: 576px) {
-  .start-chatbot-btn-custom {
-    padding: 10px 20px;
-    font-size: 1rem;
-    min-width: 180px;
-  }
+/* Mensaje del USUARIO */
+.botui-message-right .botui-message-content {
+  background-color: var(--botui-message-bg-user) !important;
+  color: var(--botui-message-text-user) !important;
 }

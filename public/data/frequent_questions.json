@@ -10,20 +10,18 @@
     "question": "Agradecimiento"
   },
   {
+    "answer": "Que quieres saber sobre tesinas, puedo ayudarte con información general, búsqueda de tesinas específicas, autores, temas destacados y más. ¿Qué necesitas saber?",
+    "keywords": ["tesina", "tesinas", "tesis", "trabajo final"],
+    "question": "Tesina guía"
+  },
+  {
     "answer": "Una tesina es un trabajo de investigación o desarrollo que realizan los estudiantes universitarios al final de su carrera para obtener su título. Generalmente es menos extensa que una tesis doctoral.",
-    "keywords": ["tesina", "que es", "definicion", "definición"],
+    "keywords": ["que es una tesina", "definicion", "definición", "tesinas"],
     "question": "¿Qué es una tesina?"
   },
   {
     "answer": "Puedes usar la barra de búsqueda en nuestra página principal para encontrar tesinas por título, autor o palabras clave. Simplemente escribe lo que buscas y presiona Enter.",
-    "keywords": [
-      "buscar",
-      "encontrar",
-      "como",
-      "dónde",
-      "busqueda",
-      "buscador"
-    ],
+    "keywords": ["buscar", "encontrar", "dónde", "busqueda", "buscador"],
     "question": "¿Cómo puedo buscar tesinas?"
   },
   {
