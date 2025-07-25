@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } catch (error) {
         console.error("Error en la función callLLM (catch block):", error);
-        return "Lo siento, hubo un problema al conectar con el servicio de inteligencia artificial. Por favor, intenta de nuevo.";
+        return "Lo siento, no tengo el conocimiento para responder a esa pregunta en este momento. ";
       }
     }
 
