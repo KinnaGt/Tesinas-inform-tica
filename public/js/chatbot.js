@@ -105,13 +105,12 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         };
 
-        const apiKey = "";
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+        const apiUrl = "/api/gemini-proxy"; // Función serverless
 
         const response = await fetch(apiUrl, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
+          body: JSON.stringify(payload), // Envías el payload a tu proxy
         });
 
         if (!response.ok) {
