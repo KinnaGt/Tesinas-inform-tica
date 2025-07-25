@@ -21,13 +21,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let botui;
     let chatHistory = [];
+    let tesinasData = [];
+
+    // Función para cargar el JSON de tesinas
+    async function loadTesinasData() {
+      try {
+        const response = await fetch("data/tesinas.json");
+        if (!response.ok) {
+          const errorText = await response.text();
+          throw new Error(
+            `HTTP error! status: ${response.status}, text: ${errorText}`
+          );
+        }
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error("Error al cargar los datos de tesinas:", error);
+        return [];
+      }
+    }
 
     // Función para cargar el JSON de preguntas y respuestas frecuentes
     async function loadKnowledgeBase() {
       try {
         const response = await fetch("data/frequent_questions.json");
         if (!response.ok) {
-          const errorText = await response.text(); // Intenta leer el texto del error
+          const errorText = await response.text();
           throw new Error(
             `HTTP error! status: ${response.status}, text: ${errorText}`
           );
@@ -51,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
       }
-      return null; // No se encontró una respuesta directa
+      return null;
     }
 
     // Función para llamar al modelo de lenguaje (LLM)
@@ -86,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         };
 
-        const apiKey = window.GEMINI_API_KEY_LOCAL || "";
+        const apiKey = "";
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
         const response = await fetch(apiUrl, {
@@ -126,12 +145,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } catch (error) {
         console.error("Error en la función callLLM (catch block):", error);
-        return "Lo siento, no estoy capacitado para responder a esa pregunta. Por favor, intenta con otra consulta o pregunta sobre tesinas.";
+        return "Lo siento, hubo un problema al conectar con el servicio de inteligencia artificial. Por favor, intenta de nuevo.";
       }
     }
 
     // Función para manejar el bucle de entrada de texto principal
-    async function handleTextInputLoop(knowledgeBase) {
+    async function handleTextInputLoop(knowledgeBase, tesinasData) {
       while (true) {
         const input = await botui.action.text({
           action: {
@@ -159,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Buscando una respuesta... (Esto puede tardar un momento)",
             });
             const llmPrompt = `El usuario pregunta: "${userQuestion}". Basado en la información de tesinas proporcionada y tu conocimiento general sobre tesinas de informática de la UNLP, por favor proporciona una respuesta concisa y útil. Si no tienes información específica, indica que no puedes responder directamente pero ofrece una sugerencia general.`;
-            const llmAnswer = await callLLM(llmPrompt);
+            const llmAnswer = await callLLM(llmPrompt, tesinasData);
             await botui.message.bot({
               content: llmAnswer,
             });
@@ -171,11 +190,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     }
+
     // Función para inicializar y empezar la conversación del chatbot
     async function initializeAndStartChatbot() {
       botui = new BotUI("botui-app");
 
       const knowledgeBase = await loadKnowledgeBase();
+      tesinasData = await loadTesinasData();
 
       await botui.message.bot({
         content:
@@ -183,7 +204,8 @@ document.addEventListener("DOMContentLoaded", () => {
         scroll: false,
       });
 
-      handleTextInputLoop(knowledgeBase);
+      // Iniciar el bucle de entrada de texto
+      handleTextInputLoop(knowledgeBase, tesinasData);
     }
 
     // Event listener para el botón "Iniciar Chatbot"
