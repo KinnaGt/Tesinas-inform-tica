@@ -2,13 +2,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   const includes = document.querySelectorAll("[data-include-html]");
 
-  // Si no hay elementos a incluir, simplemente ejecuta las funciones finales.
-  // El chatbot ahora se inicializa a sí mismo en chatbot.js
   if (includes.length === 0) {
     loadTesinas();
     const savedTheme = localStorage.getItem("theme") || "dark";
     updateThemeImages(savedTheme);
-    window.scrollTo(0, 0); // Forzar scroll al inicio si no hay includes
+    window.scrollTo(0, 0);
     return;
   }
 
@@ -19,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (resp.ok) {
         el.innerHTML = await resp.text();
 
-        // Inicia menú de accesibilidad si corresponde
         if (file.includes("top_bar.html")) {
           setupAccessibilityMenu();
         }
@@ -31,12 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Espera a que todas las promesas de carga de HTML se resuelvan
   Promise.all(promises).then(() => {
-    // Una vez que todo el HTML dinámico ha sido cargado en el DOM:
     loadTesinas(); // Carga las tesinas
 
-    // Lógica de filtros de tesinas (se mantiene igual)
+    // Lógica de filtros de tesinas
     document.querySelectorAll(".btn-filter").forEach((btn) =>
       btn.addEventListener("click", () => {
         document
@@ -52,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
       })
     );
 
-    // Lógica de actualización de imágenes de tema (se mantiene igual)
     const savedTheme = localStorage.getItem("theme") || "dark";
     updateThemeImages(savedTheme);
 
@@ -60,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Las funciones auxiliares permanecen igual
 function setupAccessibilityMenu() {
   const settingsBtn = document.getElementById("acc-settings-btn");
   const menu = document.getElementById("acc-menu");
@@ -86,7 +79,7 @@ function setupAccessibilityMenu() {
   };
 
   const savedFontSize = localStorage.getItem("fontSize") || "medium";
-  setFontSize(savedFontSize); // ← Restaura selección
+  setFontSize(savedFontSize);
 
   const darkBtn = document.getElementById("dark-theme-btn");
   const lightBtn = document.getElementById("light-theme-btn");
@@ -154,7 +147,6 @@ function loadTesinas() {
     .then((res) => res.json())
     .then((tesinas) => {
       tesinas.forEach((tesina) => {
-        // Usar el filtro para definir el banner, si no existe usar default
         const filter = tesina.filter?.trim() || "Other";
         const banner = banners[filter];
 
@@ -180,7 +172,6 @@ function loadTesinas() {
         container.appendChild(col);
       });
 
-      // Resto igual: filtros, dragscroll, etc
       document.querySelectorAll(".btn-filter").forEach((btn) =>
         btn.addEventListener("click", () => {
           document
