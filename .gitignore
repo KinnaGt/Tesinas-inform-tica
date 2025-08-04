@@ -9,7 +9,7 @@ public/data/tesinas_old.json
 public/data/tesinas_todas.json
 public/data/tesinas_with_resumes.json
 public/data/tesinas_no_shuffled.json
-
+public/data/frequent_questions_fake.json
 
 # Archivos del sistema
 .DS_Store
